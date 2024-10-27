@@ -1,8 +1,3 @@
-// import { useState } from 'react';
-// import reactLogo from './assets/react.svg';
-// import viteLogo from '/vite.svg';
-import './App.css';
-
 function footer() {
 	return (
 		<>
@@ -59,7 +54,7 @@ function footer() {
 								<div className="widget widget-about mt-0 mb-4">
 									<a href="demo12.html" className="logo-footer">
 										<img
-											src="assets/images/demos/demo12/logo.png"
+											src="/src/assets/images/demos/demo12/logo.png"
 											alt="logo-footer"
 											width="145"
 											height="45"
@@ -267,7 +262,7 @@ function footer() {
 							</span>
 							<figure className="payment">
 								<img
-									src="assets/images/payment.png"
+									src="/src/assets/images/payment.png"
 									alt="payment"
 									width="159"
 									height="25"

@@ -1,8 +1,4 @@
-// import { useState } from 'react';
-// import reactLogo from './assets/react.svg';
-// import viteLogo from '/vite.svg';
 import './App.css';
-
 function scrollTop() {
 	return (
 		<>
@@ -23,12 +19,11 @@ function scrollTop() {
 						id="progress-indicator"
 						fill="transparent"
 						stroke="#000000"
-						// eslint-disable-next-line react/no-unknown-property
-						stroke-miterlimit="10"
+						strokeMiterlimit="10"
 						cx="35"
 						cy="35"
 						r="34"
-						style="stroke-dasharray: 16.4198, 400"
+						style={{ strokeDasharray: '16.4198, 400' }}
 					></circle>
 				</svg>
 			</a>

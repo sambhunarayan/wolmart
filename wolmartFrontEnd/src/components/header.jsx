@@ -1,8 +1,3 @@
-// import { useState } from 'react';
-// import reactLogo from './assets/react.svg';
-// import viteLogo from '/vite.svg';
-import './App.css';
-
 function header() {
 	return (
 		<>
@@ -20,7 +15,7 @@ function header() {
 								<i className="w-icon-account"></i>Sign In
 							</a>
 							<span className="delimiter d-lg-show">/</span>
-							<a href="login.html" className="ml-0 d-lg-show login register">
+							<a href="signup.html" className="ml-0 d-lg-show login register">
 								Register
 							</a>
 						</div>
@@ -32,9 +27,9 @@ function header() {
 							<a href="#" className="mobile-menu-toggle w-icon-hamburger"></a>
 							<a href="index.html" className="logo">
 								<img
-									src="assets/images/demos/demo12/logo.png"
+									src="./src/assets/img/logo.png"
 									alt="logo"
-									width="144"
+									width="205"
 									height="45"
 								/>
 							</a>
@@ -46,15 +41,15 @@ function header() {
 								<div className="select-box bg-white">
 									<select id="category" name="category">
 										<option value="">All Categories</option>
-										<option value="4">Fashion</option>
-										<option value="5">Furniture</option>
-										<option value="6">Shoes</option>
-										<option value="7">Sports</option>
-										<option value="8">Games</option>
-										<option value="9">Computers</option>
-										<option value="10">Electronics</option>
-										<option value="11">Kitchen</option>
-										<option value="12">Clothing</option>
+										<option value="">Fashion</option>
+										<option value="">Furniture</option>
+										<option value="">Shoes</option>
+										<option value="">Sports</option>
+										<option value="">Games</option>
+										<option value="">Computers</option>
+										<option value="">Electronics</option>
+										<option value="">Kitchen</option>
+										<option value="">Clothing</option>
 									</select>
 								</div>
 								<input
@@ -117,9 +112,7 @@ function header() {
 										<div className="product product-cart">
 											<div className="product-detail">
 												<a href="product-default.html" className="product-name">
-													Beige knitted elas
-													<br />
-													tic runner shoes
+													Beige knitted elas runner shoes
 												</a>
 												<div className="price-box">
 													<span className="product-quantity">1</span>
@@ -129,7 +122,7 @@ function header() {
 											<figure className="product-media">
 												<a href="product-default.html">
 													<img
-														src="assets/img/products/product-1.jpg"
+														src="/src/assets/img/products/product-1.jpg"
 														alt="product"
 														height="84"
 														width="94"
@@ -143,9 +136,7 @@ function header() {
 										<div className="product product-cart">
 											<div className="product-detail">
 												<a href="product-default.html" className="product-name">
-													Blue utility pina
-													<br />
-													fore denim dress
+													Blue utility
 												</a>
 												<div className="price-box">
 													<span className="product-quantity">1</span>
@@ -155,7 +146,7 @@ function header() {
 											<figure className="product-media">
 												<a href="product-default.html">
 													<img
-														src="assets/img/products/product-2.jpg"
+														src="/src/assets/img/products/product-2.jpg"
 														alt="product"
 														width="84"
 														height="94"
