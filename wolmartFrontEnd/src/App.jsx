@@ -1,7 +1,7 @@
 import './App.css';
 import Header from './components/header';
 import Footer from './components/footer';
-import Homepage from './components/homePage/homePage';
+import Homepage from './views/homePage';
 import ScrollTop from './components/scrollTop';
 
 function App() {
