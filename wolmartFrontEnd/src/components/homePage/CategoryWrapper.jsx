@@ -1,4 +1,4 @@
-function homePage() {
+function CategoryWrapper() {
 	return (
 		<>
 			<div className="container mb-2">
@@ -208,4 +208,4 @@ function homePage() {
 	);
 }
 
-export default homePage;
+export default CategoryWrapper;

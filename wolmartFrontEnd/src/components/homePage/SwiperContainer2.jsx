@@ -1,4 +1,4 @@
-function swiperContainer2() {
+function SwiperContainer2() {
 	return (
 		<>
 			<div className="container">
@@ -336,4 +336,4 @@ function swiperContainer2() {
 	);
 }
 
-export default swiperContainer2;
+export default SwiperContainer2;

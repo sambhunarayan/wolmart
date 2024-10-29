@@ -1,4 +1,4 @@
-function dealOfTheDay() {
+function DealOfTheDay() {
 	return (
 		<>
 			<div className="container mb-4">
@@ -236,4 +236,4 @@ function dealOfTheDay() {
 	);
 }
 
-export default dealOfTheDay;
+export default DealOfTheDay;

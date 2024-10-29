@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet';
-import InnerHeader from '../components/innerHeader';
+import InnerHeader from '../components/InnerHeader';
 // import Footer from '../components/footer';
 function Cart() {
 	return (

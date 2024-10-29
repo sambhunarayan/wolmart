@@ -1,19 +1,25 @@
 import { Helmet } from 'react-helmet';
-import InnerHeader from '../components/innerHeader';
-import Navigation from '../components/productDefault/navigation';
-import MainContent from '../components/productDefault/mainContent';
-import SideBar from '../components/productDefault/sideBar';
-import RelatedProducts from '../components/productDefault/relatedProducts';
-// import Footer from '../components/footer';
-import RootElement from '../components/productDefault/rootElement';
-import QuickView from '../components/productDefault/quickView';
-import ScrollTop from '../components/scrollTop';
+import CategoryWrapper from '../components/homePage/CategoryWrapper';
+import IntroSection from '../components/homePage/IntroSection';
+import SwiperContainer from '../components/homePage/SwiperContainer';
+import DealOfTheDay from '../components/homePage/DealOfTheDay';
+import SwiperContainer2 from '../components/homePage/SwiperContainer2';
+import NotificationWrapper from '../components/homePage/NotificationWrapper';
+import LatestProducts from '../components/homePage/LatestProducts';
+import BannerWrapper from '../components/homePage/BannerWrapper';
+import RecentlyViewed from '../components/homePage/RecentlyViewed';
+import LinkBanner from '../components/homePage/LinkBanner';
+import Ourclients from '../components/homePage/OurClients';
+import Newsletter from '../components/homePage/NewsLetter';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import ScrollTop from '../components/ScrollTop';
 
-function ProductDefault() {
+function homePage() {
 	return (
 		<>
 			<Helmet>
-				<link rel="icon" type="image/png" href="assets/img/favicon.png" />
+				<link rel="icon" type="image/png" href="/assets/img/favicon.png" />
 				<link
 					href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Jost:wght@400;500;600;700;800&display=swap"
 					rel="stylesheet"
@@ -69,53 +75,51 @@ function ProductDefault() {
 				<link
 					rel="stylesheet"
 					type="text/css"
-					href="/assets/css/style.min.css"
+					href="/assets/css/home.min.css"
 				/>
-				<link
-					rel="stylesheet"
-					type="text/css"
-					href="/assets/css/photoswipe.min.css"
-				/>
-				<link
-					rel="stylesheet"
-					type="text/css"
-					href="/assets/css/default-skin.min.css"
-				/>
-				{/* <!-- Plugin JS File --> */}
+				{/* Plugin JS Files */}
+				<script src="/assets/js/jquery.min.js"></script>
 				<script src="/assets/js/parallax.min.js"></script>
 				<script src="/assets/js/jquery.plugin.min.js"></script>
-				<script src="/assets/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
 				<script src="/assets/js/swiper-bundle.min.js"></script>
 				<script src="/assets/js/imagesloaded.pkgd.min.js"></script>
 				<script src="/assets/js/skrollr.min.js"></script>
+				<script src="/assets/js/jquery.magnific-popup.min.js"></script>
 				<script src="/assets/js/jquery.zoom.js"></script>
 				<script src="/assets/js/jquery.countdown.min.js"></script>
-				<script src="/assets/js/photoswipe.min.js"></script>
-				<script src="/assets/js/photoswipe-ui-default.min.js"></script>
 				<script src="/assets/js/main.min.js"></script>
-			</Helmet>{' '}
-			<InnerHeader />
-			<main className="main mb-10 pb-1">
-				{/* navbar */}
-				<Navigation />
-				<div className="page-content">
-					<div className="container">
-						<div className="row gutter-lg mb-10">
-							{/* maincontent */}
-							<MainContent />
-							{/* sidebar */}
-							<SideBar />
-						</div>
-						<RelatedProducts />
-					</div>
-				</div>
+			</Helmet>
+			<Header />
+			<main className="main">
+				{/* category */}
+				<CategoryWrapper />
+				{/* intro section */}
+				<IntroSection />
+				{/* swiper container */}
+				<SwiperContainer />
+				{/* deal of the day */}
+				<DealOfTheDay />
+				{/* swiper container 2 */}
+				<SwiperContainer2 />
+				{/* notification wrapper */}
+				<NotificationWrapper />
+				{/* latest products */}
+				<LatestProducts />
+				{/* banner wrapper */}
+				<BannerWrapper />
+				{/* selected products */}
+				<RecentlyViewed />
+				{/* link banner */}
+				<LinkBanner />
+				{/* our clients */}
+				<Ourclients />
 			</main>
-			{/* <Footer /> */}
+			<Footer />
+
 			<ScrollTop />
-			<RootElement />
-			<QuickView />
+			<Newsletter />
 		</>
 	);
 }
 
-export default ProductDefault;
+export default homePage;

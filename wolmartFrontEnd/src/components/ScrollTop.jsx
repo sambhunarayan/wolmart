@@ -1,5 +1,5 @@
 import './App.css';
-function scrollTop() {
+function ScrollTop() {
 	return (
 		<>
 			<a
@@ -31,4 +31,4 @@ function scrollTop() {
 	);
 }
 
-export default scrollTop;
+export default ScrollTop;

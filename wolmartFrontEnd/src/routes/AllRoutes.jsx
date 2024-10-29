@@ -1,9 +1,9 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import HomePage from '../views/homePage';
-import ProductDefault from '../views/productDefault';
-import Cart from '../views/cart';
-import Checkout from '../views/checkOut';
+import HomePage from '../views/HomePage';
+import ProductDefault from '../views/ProductDefault';
+import Cart from '../views/Cart';
+import Checkout from '../views/CheckOut';
 
 export const AllRoutes = () => {
 	return (

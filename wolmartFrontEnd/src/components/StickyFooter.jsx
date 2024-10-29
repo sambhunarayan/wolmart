@@ -1,4 +1,4 @@
-function stickyFooter() {
+function StickyFooter() {
 	return (
 		<>
 			<div className="sticky-footer sticky-content fix-bottom">
@@ -126,4 +126,4 @@ function stickyFooter() {
 	);
 }
 
-export default stickyFooter;
+export default StickyFooter;

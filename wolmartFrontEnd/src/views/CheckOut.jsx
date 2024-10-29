@@ -1,11 +1,11 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import InnerHeader from '../components/innerHeader';
-import ScrollTop from '../components/scrollTop';
+import InnerHeader from '../components/InnerHeader';
+import ScrollTop from '../components/ScrollTop';
 import { Link } from 'react-router-dom';
-import LoginForm from '../components/checkout/loginForm';
-import CouponForm from '../components/checkout/couponForm';
-import Coupon from '../components/checkout/couponForm';
+import LoginForm from '../components/checkout/LoginForm';
+import CouponForm from '../components/checkout/CouponForm';
+import Coupon from '../components/checkout/CouponForm';
 import CheckoutForm from '../components/checkout/CheckOutForm';
 function Checkout({ currentStep }) {
 	return (

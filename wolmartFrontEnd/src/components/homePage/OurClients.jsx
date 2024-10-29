@@ -1,4 +1,4 @@
-function ourClients() {
+function OurClients() {
 	return (
 		<>
 			<div className="container mb-4">
@@ -440,4 +440,4 @@ function ourClients() {
 	);
 }
 
-export default ourClients;
+export default OurClients;

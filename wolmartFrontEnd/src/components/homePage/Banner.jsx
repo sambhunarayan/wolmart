@@ -1,4 +1,4 @@
-function banner() {
+function Banner() {
 	return (
 		<>
 			<div
@@ -46,4 +46,4 @@ function banner() {
 	);
 }
 
-export default banner;
+export default Banner;

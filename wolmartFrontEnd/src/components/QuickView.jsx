@@ -3,7 +3,7 @@
 // import viteLogo from '/vite.svg';
 import './App.css';
 
-function quickView() {
+function QuickView() {
 	return (
 		<>
 			<div className="product product-single product-popup">
