@@ -1,4 +1,4 @@
-function LatesProducts() {
+function LatestProducts() {
 	return (
 		<>
 			<div className="container">
@@ -3694,4 +3694,4 @@ function LatesProducts() {
 	);
 }
 
-export default LatesProducts;
+export default LatestProducts;

@@ -1,11 +1,7 @@
-// import { useState } from 'react';
-// import reactLogo from './assets/react.svg';
-// import viteLogo from '/vite.svg';
-import './App.css';
-
-function newsletter() {
+function Newsletter() {
 	return (
 		<>
+			{/* // Start of Newsletter popup */}
 			<div className="newsletter-popup mfp-hide">
 				<div className="newsletter-content">
 					<h4 className="text-uppercase font-weight-normal ls-25">
@@ -27,7 +23,7 @@ function newsletter() {
 							name="email"
 							id="email2"
 							placeholder="Your email address"
-							required=""
+							required
 						/>
 						<button className="btn btn-dark" type="submit">
 							SUBMIT
@@ -39,11 +35,10 @@ function newsletter() {
 							className="custom-checkbox"
 							id="hide-newsletter-popup"
 							name="hide-newsletter-popup"
-							required=""
+							required
 						/>
 						<label
-							// eslint-disable-next-line react/no-unknown-property
-							for="hide-newsletter-popup"
+							htmlFor="hide-newsletter-popup"
 							className="font-size-sm text-light"
 						>
 							Don&apos;t show this popup again.
@@ -51,8 +46,9 @@ function newsletter() {
 					</div>
 				</div>
 			</div>
+			{/* // End of Newsletter popup */}
 		</>
 	);
 }
 
-export default newsletter;
+export default Newsletter;
