@@ -424,14 +424,14 @@ function CheckoutForm() {
 													);
 													return false;
 												}}
-												previewlistener="true"
+												data-previewlistener="true"
 											>
 												What is PayPal?
 											</a>
 											<div id="paypal" className="card-body collapsed">
 												<p className="mb-0">
 													Pay via PayPal; you can pay with your credit card if
-													you don't have a PayPal account.
+													you don&apos;t have a PayPal account.
 												</p>
 											</div>
 										</div>

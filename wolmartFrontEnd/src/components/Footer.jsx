@@ -3,9 +3,7 @@ function footer() {
 		<>
 			<footer
 				className="footer appear-animate"
-				data-animation-options="{
-            'name': 'fadeIn'
-        }"
+				data-animation-options="{ 'name': 'fadeIn' }"
 			>
 				<div className="footer-newsletter bg-primary">
 					<div className="container">
@@ -20,7 +18,7 @@ function footer() {
 											Subscribe To Our Newsletter
 										</h4>
 										<p className="text-white">
-											Get all the latest information on Events, Sales and
+											Get all the latest information on Events, Sales, and
 											Offers.
 										</p>
 									</div>
@@ -40,7 +38,7 @@ function footer() {
 										placeholder="Your E-mail Address"
 									/>
 									<button className="btn btn-dark btn-rounded" type="submit">
-										Subscribe<i className="w-icon-long-arrow-right"></i>
+										Subscribe <i className="w-icon-long-arrow-right"></i>
 									</button>
 								</form>
 							</div>
@@ -51,12 +49,12 @@ function footer() {
 					<div className="footer-top">
 						<div className="row">
 							<div className="col-lg-4 col-sm-6">
-								<div className="widget widget-about mt-0 mb-4">
-									<a href="demo12.html" className="logo-footer">
+								<div className="widget widget-about">
+									<a href="index.html" className="logo-footer">
 										<img
-											src="/src/assets/img/logo.png"
+											src="assets/img/logo.png"
 											alt="logo-footer"
-											width="145"
+											width="144"
 											height="45"
 										/>
 									</a>
@@ -68,10 +66,8 @@ function footer() {
 											1-800-570-7777
 										</a>
 										<p className="widget-about-desc">
-											Register now to get updates on pronot get up icons &
-											coupons ster now toon.
+											Register now to get updates on promotions & coupons.
 										</p>
-
 										<div className="social-icons social-icons-colored">
 											<a
 												href="#"
@@ -102,7 +98,7 @@ function footer() {
 									<h3 className="widget-title">Company</h3>
 									<ul className="widget-body">
 										<li>
-											<a href="about-us.html">About Us</a>
+											<a href="#">About Us</a>
 										</li>
 										<li>
 											<a href="#">Team Member</a>
@@ -111,10 +107,10 @@ function footer() {
 											<a href="#">Career</a>
 										</li>
 										<li>
-											<a href="contact-us.html">Contact Us</a>
+											<a href="#">Contact Us</a>
 										</li>
 										<li>
-											<a href="#">Affilate</a>
+											<a href="#">Affiliate</a>
 										</li>
 										<li>
 											<a href="#">Order History</a>
@@ -130,16 +126,16 @@ function footer() {
 											<a href="#">Track My Order</a>
 										</li>
 										<li>
-											<a href="cart.html">View Cart</a>
+											<a href="#">View Cart</a>
 										</li>
 										<li>
-											<a href="login.html">Sign In</a>
+											<a href="#">Sign In</a>
 										</li>
 										<li>
 											<a href="#">Help</a>
 										</li>
 										<li>
-											<a href="wishlist.html">My Wishlist</a>
+											<a href="#">My Wishlist</a>
 										</li>
 										<li>
 											<a href="#">Privacy Policy</a>
@@ -167,7 +163,7 @@ function footer() {
 											<a href="#">Shipping</a>
 										</li>
 										<li>
-											<a href="#">Term and Conditions</a>
+											<a href="#">Terms and Conditions</a>
 										</li>
 									</ul>
 								</div>
@@ -185,19 +181,6 @@ function footer() {
 								<a href="#">Audio Speaker</a>
 								<a href="#">Security Camera</a>
 								<a href="#">View All</a>
-							</div>
-							<div className="category-box">
-								<h6 className="category-name">Clothing & Apparel:</h6>
-								<a href="#">Men&apos;s T-shirt</a>
-								<a href="#">Dresses</a>
-								<a href="#">Men&apos;s Sneacker</a>
-								<a href="#">Leather Backpack</a>
-								<a href="#">Watches</a>
-								<a href="#">Jeans</a>
-								<a href="#">Sunglasses</a>
-								<a href="#">Boots</a>
-								<a href="#">Rayban</a>
-								<a href="#">Acccessories</a>
 							</div>
 							<div className="category-box">
 								<h6 className="category-name">Home, Garden & Kitchen:</h6>
@@ -223,19 +206,6 @@ function footer() {
 								<a href="#">View all</a>
 							</div>
 							<div className="category-box">
-								<h6 className="category-name">Jewelry & Watches:</h6>
-								<a href="#">Necklace</a>
-								<a href="#">Pendant</a>
-								<a href="#">Diamond Ring</a>
-								<a href="#">Silver Earing</a>
-								<a href="#">Leather Watcher</a>
-								<a href="#">Rolex</a>
-								<a href="#">Gucci</a>
-								<a href="#">Australian Opal</a>
-								<a href="#">Ammolite</a>
-								<a href="#">Sun Pyrite</a>
-							</div>
-							<div className="category-box">
 								<h6 className="category-name">Computer & Technologies:</h6>
 								<a href="#">Laptop</a>
 								<a href="#">iMac</a>
@@ -253,7 +223,7 @@ function footer() {
 					<div className="footer-bottom">
 						<div className="footer-left">
 							<p className="copyright">
-								Copyright © 2025 DreamDeal Store. All Rights Reserved.
+								Copyright © 2021 Dream Deal Store. All Rights Reserved.
 							</p>
 						</div>
 						<div className="footer-right">
@@ -262,7 +232,7 @@ function footer() {
 							</span>
 							<figure className="payment">
 								<img
-									src="/src/assets/img/payment.png"
+									src="assets/img/payment.png"
 									alt="payment"
 									width="159"
 									height="25"

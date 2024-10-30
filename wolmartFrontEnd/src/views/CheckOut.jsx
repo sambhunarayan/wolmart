@@ -1,12 +1,11 @@
-import React from 'react';
 import { Helmet } from 'react-helmet';
 import InnerHeader from '../components/InnerHeader';
 import ScrollTop from '../components/ScrollTop';
 import { Link } from 'react-router-dom';
 import LoginForm from '../components/checkout/LoginForm';
 import CouponForm from '../components/checkout/CouponForm';
-import Coupon from '../components/checkout/CouponForm';
 import CheckoutForm from '../components/checkout/CheckOutForm';
+// eslint-disable-next-line react/prop-types
 function Checkout({ currentStep }) {
 	return (
 		<>
@@ -148,7 +147,7 @@ function Checkout({ currentStep }) {
 							Enter your code
 						</a>
 					</div>
-					<Coupon />
+					<CouponForm />
 					<CheckoutForm />
 				</div>
 			</div>
