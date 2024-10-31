@@ -18,7 +18,7 @@ function IntroSection() {
 								navigation
 								loop={true}
 								autoplay={{
-									delay: 3000, // Time in milliseconds (3000 ms = 3 seconds)
+									delay: 1000, // Time in milliseconds (3000 ms = 3 seconds)
 									disableOnInteraction: false, // Continue autoplay after user interactions
 								}}
 							>
