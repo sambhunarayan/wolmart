@@ -133,7 +133,31 @@ function homePage() {
 				<Ourclients />
 			</main>
 			<Footer />
-
+			<div className="compare-popup">
+				<div className="container">
+					<div className="compare-title">
+						<h4 className="title title-center">Compare Products</h4>
+					</div>
+					<ul className="compare-product-list list-style-none">
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+					<a href="#" className="btn btn-clean">
+						Clean All
+					</a>
+					<a
+						href="compare.html"
+						className="btn btn-dark btn-rounded"
+						data-previewlistener="true"
+					>
+						Start Compare!
+					</a>
+				</div>
+			</div>
+			<div className="compare-popup-overlay"></div>
+			<div className="minipopup-area"></div>
 			<ScrollTop />
 			<Newsletter />
 		</>
