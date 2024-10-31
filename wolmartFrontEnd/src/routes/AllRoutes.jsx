@@ -4,6 +4,7 @@ import HomePage from '../views/HomePage';
 import ProductDefault from '../views/ProductDefault';
 import Cart from '../views/Cart';
 import Checkout from '../views/CheckOut';
+import Wishlist from '../views/Wishlist';
 
 export const AllRoutes = () => {
 	return (
@@ -13,6 +14,7 @@ export const AllRoutes = () => {
 			<Route path="/productDefault" element={<ProductDefault />} />
 			<Route path="/cart" element={<Cart />} />
 			<Route path="/checkout" element={<Checkout />} />
+			<Route path="/wishlist" element={<Wishlist />} />
 		</Routes>
 	);
 };

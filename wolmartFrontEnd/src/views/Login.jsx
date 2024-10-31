@@ -70,7 +70,6 @@ function Login() {
 				{/* <!-- Magnific Popup --> */}
 				<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
 
-				{/* <!-- Main JavaScript file (replace with your custom JavaScript file if necessary) --> */}
 				<script src="/assets/js/main.min.js"></script>
 			</Helmet>
 			<InnerHeader />
