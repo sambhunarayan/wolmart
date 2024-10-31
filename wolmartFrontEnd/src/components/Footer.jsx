@@ -2,10 +2,10 @@ function footer() {
 	return (
 		<>
 			<footer
-				className="footer appear-animate"
+				className="footer"
 				data-animation-options="{
-            'name': 'fadeIn'
-        }"
+			    'name': 'fadeIn'
+			}"
 			>
 				<div className="footer-newsletter bg-primary">
 					<div className="container">

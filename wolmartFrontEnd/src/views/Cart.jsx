@@ -1,7 +1,11 @@
 import { Helmet } from 'react-helmet';
 import InnerHeader from '../components/InnerHeader';
-// import Footer from '../components/footer';
 function Cart() {
+
+
+
+
+	
 	return (
 		<>
 			<Helmet>
@@ -35,7 +39,7 @@ function Cart() {
 					rel="preload"
 					href="/assets/fonts/wolmart.ttf?png09e"
 					as="font"
-					type="font/ttf"
+					type="font/ttf" 
 					crossOrigin="anonymous"
 				/>
 				<link
@@ -381,7 +385,7 @@ function Cart() {
 											</span>
 										</div>
 										<a
-											href="#"
+											href="/checkout"
 											className="btn btn-block btn-dark btn-icon-right btn-rounded btn-checkout"
 										>
 											Proceed to checkout

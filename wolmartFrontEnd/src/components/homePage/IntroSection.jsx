@@ -21,7 +21,7 @@ function IntroSection() {
 									<div
 										className="swiper-slide banner banner-fixed intro-slide intro-slide1 br-sm"
 										style={{
-											backgroundImage: `url("./src/assets/img/intro-3.jpg")`,
+											backgroundImage: `url("/assets/img/intro-3.jpg")`,
 											backgroundColor: 'rgb(63, 62, 58)',
 											width: '865px',
 										}}
@@ -83,7 +83,7 @@ function IntroSection() {
 									<div
 										className="swiper-slide banner banner-fixed intro-slide intro-slide2 br-sm swiper-slide-prev"
 										style={{
-											backgroundImage: `url("./src/assets/img/intro-2.jpg")`,
+											backgroundImage: `url("/assets/img/intro-2.jpg")`,
 											backgroundColor: 'rgb(226, 226, 224)',
 											width: '865px',
 										}}
@@ -126,7 +126,7 @@ function IntroSection() {
 									<div
 										className="swiper-slide banner banner-fixed intro-slide intro-slide3 br-sm swiper-slide-active"
 										style={{
-											backgroundImage: `url("./src/assets/img/intro-1.jpg")`,
+											backgroundImage: `url("/assets/img/intro-1.jpg")`,
 											backgroundColor: 'rgb(234, 234, 234)',
 											width: '865px',
 										}}
@@ -202,7 +202,7 @@ function IntroSection() {
 							<div className="banner banner-fixed intro-banner br-sm mb-4">
 								<figure className="br-sm">
 									<img
-										src="./src/assets/img/banner-1.jpg"
+										src="/assets/img/banner-1.jpg"
 										alt="Category Banner"
 										width="680"
 										height="180"
@@ -229,7 +229,7 @@ function IntroSection() {
 							<div className="banner banner-fixed intro-banner intro-banner2 br-sm mb-4">
 								<figure className="br-sm">
 									<img
-										src="./src/assets/img/banner-2.jpg"
+										src="/assets/img/banner-2.jpg"
 										alt="Category Banner"
 										width="680"
 										height="180"
