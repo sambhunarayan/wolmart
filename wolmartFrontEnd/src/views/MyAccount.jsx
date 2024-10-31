@@ -58,7 +58,7 @@ function MyAccount() {
 					<div className="container">
 						<ul className="breadcrumb">
 							<li>
-								<a href="demo1.html" data-previewListener="true">
+								<a href="demo1.html" data-previewlistener="true">
 									Home
 								</a>
 							</li>
@@ -97,12 +97,12 @@ function MyAccount() {
 								</a>
 							</li>
 							<li className="link-item">
-								<a href="/wishlist" data-previewListener="true">
+								<a href="/wishlist" data-previewlistener="true">
 									Wishlist
 								</a>
 							</li>
 							<li className="link-item">
-								<a href="/assets/ajax/login" data-previewListener="true">
+								<a href="/assets/ajax/login" data-previewlistener="true">
 									Logout
 								</a>
 							</li>
@@ -197,7 +197,7 @@ function MyAccount() {
 										<a
 											className="link-to-tab"
 											href="/wishlist"
-											data-previewListener="true"
+											data-previewlistener="true"
 										>
 											<div className="icon-box text-center">
 												<span className="icon-box-icon icon-wishlist">
@@ -274,7 +274,7 @@ function MyAccount() {
 								<a
 									href="shop-banner-sidebar.html"
 									className="btn btn-dark btn-rounded btn-icon-right"
-									data-previewListener="true"
+									data-previewlistener="true"
 								>
 									Go Shop<i className="w-icon-long-arrow-right"></i>
 								</a>
@@ -293,7 +293,7 @@ function MyAccount() {
 								<a
 									href="shop-banner-sidebar.html"
 									className="btn btn-dark btn-rounded btn-icon-right"
-									data-previewListener="true"
+									data-previewlistener="true"
 								>
 									Go Shop<i className="w-icon-long-arrow-right"></i>
 								</a>
@@ -433,7 +433,7 @@ function MyAccount() {
 					<a
 						href="compare.html"
 						className="btn btn-dark btn-rounded"
-						data-previewListener="true"
+						data-previewlistener="true"
 					>
 						Start Compare!
 					</a>

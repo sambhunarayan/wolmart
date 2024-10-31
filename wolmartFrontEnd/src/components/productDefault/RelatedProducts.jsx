@@ -51,8 +51,8 @@ const RelatedProducts = () => {
 	];
 
 	const handlePreview = event => {
-		const previewListener = event.currentTarget.dataset.previewListener;
-		console.log(previewListener); // Use the value as needed
+		const previewlistener = event.currentTarget.dataset.previewlistener;
+		console.log(previewlistener); // Use the value as needed
 		// Additional logic for handling preview
 	};
 

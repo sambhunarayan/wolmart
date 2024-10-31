@@ -345,7 +345,7 @@ function Wishlist() {
 					<a
 						href="compare.html"
 						className="btn btn-dark btn-rounded"
-						data-previewListener="true"
+						data-previewlistener="true"
 					>
 						Start Compare!
 					</a>
