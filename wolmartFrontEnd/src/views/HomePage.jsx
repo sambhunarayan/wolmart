@@ -28,13 +28,13 @@ function homePage() {
 	useEffect(() => {
 		const handleFetchDeals = async () => {
 			const requestModel = {
-				"service": "home",
-				"action": "getHomeDeals"
+				service: 'home',
+				action: 'getHomeDeals',
 			};
 
 			try {
 				const finalResponse = await fetchData(requestModel);
-				console.log("Decrypted Response:", finalResponse);
+				console.log('Decrypted Response:', finalResponse);
 
 				if (finalResponse.status === true) {
 					setHotDeals(finalResponse.data.hotDeals);
@@ -44,7 +44,7 @@ function homePage() {
 					setOurBrand(finalResponse.data.ourBrand);
 				}
 			} catch (error) {
-				console.error("Error fetching deals:", error);
+				console.error('Error fetching deals:', error);
 			}
 		};
 
@@ -53,11 +53,11 @@ function homePage() {
 
 	// Log the updated state
 	useEffect(() => {
-		console.log("latest Product updated:", latestProductsList);
+		console.log('latest Product updated:', latestProductsList);
 	}, [latestProductsList]);
 
 	useEffect(() => {
-		console.log("ourBrand updated:", ourBrandList);
+		console.log('ourBrand updated:', ourBrandList);
 	}, [ourBrandList]);
 	return (
 		<>
