@@ -14,8 +14,51 @@ import Newsletter from '../components/homePage/NewsLetter';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ScrollTop from '../components/ScrollTop';
+import { useState, useEffect } from 'react';
+import { fetchData } from '../api/api';
 
 function homePage() {
+	const [hotDeals, setHotDeals] = useState([]);
+	const [dayDeals, setDayDeals] = useState([]);
+	const [mostPopularDeals, setMostPopularDeals] = useState([]);
+	const [latestProductsList, setLatestProducts] = useState([]);
+	const [ourBrandList, setOurBrand] = useState([]);
+
+	// Fetch home deals
+	useEffect(() => {
+		const handleFetchDeals = async () => {
+			const requestModel = {
+				"service": "home",
+				"action": "getHomeDeals"
+			};
+
+			try {
+				const finalResponse = await fetchData(requestModel);
+				console.log("Decrypted Response:", finalResponse);
+
+				if (finalResponse.status === true) {
+					setHotDeals(finalResponse.data.hotDeals);
+					setDayDeals(finalResponse.data.dayDeals);
+					setMostPopularDeals(finalResponse.data.mostPopularDeals);
+					setLatestProducts(finalResponse.data.latestProducts);
+					setOurBrand(finalResponse.data.ourBrand);
+				}
+			} catch (error) {
+				console.error("Error fetching deals:", error);
+			}
+		};
+
+		handleFetchDeals();
+	}, []);
+
+	// Log the updated state
+	useEffect(() => {
+		console.log("latest Product updated:", latestProductsList);
+	}, [latestProductsList]);
+
+	useEffect(() => {
+		console.log("ourBrand updated:", ourBrandList);
+	}, [ourBrandList]);
 	return (
 		<>
 			<Helmet>
@@ -122,7 +165,7 @@ function homePage() {
 				{/* notification wrapper */}
 				<NotificationWrapper />
 				{/* latest products */}
-				<LatestProducts />
+				<LatestProducts latesProductsList={latestProductsList} />
 				{/* banner wrapper */}
 				<BannerWrapper />
 				{/* selected products */}

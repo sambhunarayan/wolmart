@@ -1,14 +1,19 @@
-function LatestProducts() {
+import { useNavigate } from "react-router-dom";
+
+function LatesProducts({ latesProductsList }) {
+	const navigate = useNavigate();
+
+
 	return (
 		<>
 			<div className="container">
 				<div
 					className="tab tab-latest-product tab-nav-center tab-nav-underline tab-line-grow filter-with-title appear-animate fadeIn appear-animation-visible"
-					style={{ animationDuration: '1.2s' }}
+					style={{ animationDuration: "1.2s" }}
 				>
 					<h2
 						className="title title-latest-product font-secondary font-weight-bolder ls-normal appear-animate fadeIn appear-animation-visible"
-						style={{ animationDuration: '1.2s' }}
+						style={{ animationDuration: "1.2s" }}
 					>
 						Latest Products
 					</h2>
@@ -41,802 +46,461 @@ function LatestProducts() {
 
 				<div
 					className="tab-content product-wrapper appear-animate fadeIn appear-animation-visible"
-					style={{ animationDuration: '1.2s' }}
+					style={{ animationDuration: "1.2s" }}
 				>
 					<div className="tab-pane active" id="tab1-1">
 						<div
 							className="swiper-container swiper-theme latest-product-wrapper shadow-swiper appear-animate mb-0 swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events fadeIn appear-animation-visible"
 							data-swiper-options="{
-                                            'spaceBetween': 20,
-                                            'slidesPerView': 2,
-                                            'breakpoints': {
-                                                '576': {
-                                                    'slidesPerView': 2
-                                                },
-                                                '768': {
-                                                    'slidesPerView': 3
-                                                },
-                                                '992': {
-                                                    'slidesPerView': 4
-                                                },
-                                                '1200': {
-                                                    'slidesPerView': 5
-                                                }
-                                            }
-                                            }"
-							style={{ animationDuration: '1.2s' }}
+											  'spaceBetween': 20,
+											  'slidesPerView': 2,
+											  'breakpoints': {
+												  '576': {
+													  'slidesPerView': 2
+												  },
+												  '768': {
+													  'slidesPerView': 3
+												  },
+												  '992': {
+													  'slidesPerView': 4
+												  },
+												  '1200': {
+													  'slidesPerView': 5
+												  }
+											  }
+											  }"
+							style={{ animationDuration: "1.2s" }}
 						>
 							<div
 								className="swiper-wrapper "
 								id="swiper-wrapper-09af49faed4106859"
 								aria-live="polite"
-								style={{ transform: 'translate3d(0px, 0px, 0px)' }}
+								style={{ transform: "translate3d(0px, 0px, 0px)" }}
 							>
 								<div
 									className="swiper-slide swiper-slide-active"
 									role="group"
 									aria-label="1 / 5"
-									style={{ width: '208px', marginRight: '20px' }}
+									style={{ width: "208px", marginRight: "20px" }}
 								>
-									<div className="product product-image-gap product-simple">
-										<figure className="product-media">
-											<a href="product-default.html">
-												<img
-													src="./src/assets/img/products/1-1-1.jpg"
-													alt="Product"
-													width="295"
-													height="335"
-												/>
-												<img
-													src="./src/assets/img/products/1-1-2.jpg"
-													alt="Product"
-													width="295"
-													height="335"
-												/>
-											</a>
-
-											<div className="product-action">
-												<a
-													href="#"
-													className="btn-product btn-quickview"
-													title="Quick View"
-												>
-													Quick View
-												</a>
-											</div>
-											<div className="product-countdown-container">
-												<div
-													className="product-countdown countdown-compact is-countdown"
-													data-until="2024, 12, 9"
-													data-format="DHMS"
-													data-compact="false"
-													data-labels-short="Days, Hours, Mins, Secs"
-												>
-													<span className="countdown-row countdown-show4">
-														<span className="countdown-section">
-															<span className="countdown-amount">43</span>
-															<span className="countdown-period">Days</span>
-														</span>
-														<span className="countdown-section">
-															<span className="countdown-amount">15</span>
-															<span className="countdown-period">Hrs</span>
-														</span>
-														<span className="countdown-section">
-															<span className="countdown-amount">50</span>
-															<span className="countdown-period">Mins</span>
-														</span>
-														<span className="countdown-section">
-															<span className="countdown-amount">48</span>
-															<span className="countdown-period">Secs</span>
-														</span>
-													</span>
-												</div>
-											</div>
-										</figure>
-										<div className="product-details">
-											<a
-												href="#"
-												className="btn-wishlist w-icon-heart"
-												title="Add to wishlist"
-											></a>
-											<h4 className="product-name">
-												<a href="product-default.html">Gold Watch</a>
-											</h4>
-											<div className="ratings-container">
-												<div className="ratings-full">
-													<span
-														className="ratings"
-														style={{ width: '80%' }}
-													></span>
-													<span className="tooltiptext tooltip-top"></span>
-												</div>
-												<a
-													href="product-default.html"
-													className="rating-reviews"
-												>
-													(1 reviews)
-												</a>
-											</div>
-											<div className="product-pa-wrapper">
-												<div className="product-price">
-													<ins className="new-price">$25.68</ins>
-													<del className="old-price">$30.45</del>
-												</div>
-												<div className="product-action">
-													<a
-														href="product-default.html"
-														className="btn-primary btn-product btn btn-link btn-underline"
-													>
-														Select Options
-													</a>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div className="product product-image-gap product-simple">
-										<figure className="product-media">
-											<a href="product-default.html">
-												<img
-													src="./src/assets/img/products/1-4-1.jpg"
-													alt="Product"
-													width="295"
-													height="335"
-												/>
-												<img
-													src="./src/assets/img/products/1-4-2.jpg"
-													alt="Product"
-													width="295"
-													height="335"
-												/>
-											</a>
-
-											<div className="product-action">
-												<a
-													href="#"
-													className="btn-product btn-quickview"
-													title="Quick View"
-												>
-													Quick View
-												</a>
-											</div>
-											<div className="product-countdown-container">
-												<div
-													className="product-countdown countdown-compact is-countdown"
-													data-until="2024, 12, 9"
-													data-format="DHMS"
-													data-compact="false"
-													data-labels-short="Days, Hours, Mins, Secs"
-												>
-													<span className="countdown-row countdown-show4">
-														<span className="countdown-section">
-															<span className="countdown-amount">43</span>
-															<span className="countdown-period">Days</span>
-														</span>
-														<span className="countdown-section">
-															<span className="countdown-amount">15</span>
-															<span className="countdown-period">Hrs</span>
-														</span>
-														<span className="countdown-section">
-															<span className="countdown-amount">50</span>
-															<span className="countdown-period">Mins</span>
-														</span>
-														<span className="countdown-section">
-															<span className="countdown-amount">48</span>
-															<span className="countdown-period">Secs</span>
-														</span>
-													</span>
-												</div>
-											</div>
-										</figure>
-										<div className="product-details">
-											<a
-												href="#"
-												className="btn-wishlist w-icon-heart"
-												title="Add to wishlist"
-											></a>
-											<h4 className="product-name">
+									{/* FIRST COLUMN */}
+									{latesProductsList.map((latestProducts, index) => (
+										<div
+											className="product product-image-gap product-simple"
+											key={index}
+										>
+											<figure className="product-media">
 												<a href="product-default.html">
-													Mini Wireless Earphone
+													<img
+														src={latestProducts.images[0]}
+														alt="Product"
+														width="295"
+														height="335"
+													/>
+													<img
+														src={latestProducts.images[1]}
+														alt="Product"
+														width="295"
+														height="335"
+													/>
 												</a>
-											</h4>
-											<div className="ratings-container">
-												<div className="ratings-full">
-													<span
-														className="ratings"
-														style={{ width: '80%' }}
-													></span>
-													<span className="tooltiptext tooltip-top"></span>
-												</div>
-												<a
-													href="product-default.html"
-													className="rating-reviews"
-												>
-													(1 reviews)
-												</a>
-											</div>
-											<div className="product-pa-wrapper">
-												<div className="product-price">
-													<ins className="new-price">$59.17 - $129.27</ins>
-												</div>
 												<div className="product-action">
 													<a
-														href="product-default.html"
-														className="btn-primary btn-product btn btn-link btn-underline"
+														href="/productDefault"
+														className="btn-product btn-quickview"
+														title="Quick View"
 													>
-														Select Options
+														Quick View
 													</a>
+												</div>
+												<div className="product-countdown-container">
+													<div
+														className="product-countdown countdown-compact is-countdown"
+														data-until="2024, 12, 9"
+														data-format="DHMS"
+														data-compact="false"
+														data-labels-short="Days, Hours, Mins, Secs"
+													>
+														<span className="countdown-row countdown-show4">
+															<span className="countdown-section">
+																<span className="countdown-amount">43</span>
+																<span className="countdown-period">Days</span>
+															</span>
+															<span className="countdown-section">
+																<span className="countdown-amount">15</span>
+																<span className="countdown-period">Hrs</span>
+															</span>
+															<span className="countdown-section">
+																<span className="countdown-amount">50</span>
+																<span className="countdown-period">Mins</span>
+															</span>
+															<span className="countdown-section">
+																<span className="countdown-amount">48</span>
+																<span className="countdown-period">Secs</span>
+															</span>
+														</span>
+													</div>
+												</div>
+											</figure>
+											<div className="product-details">
+												<a
+													href="#"
+													className="btn-wishlist w-icon-heart"
+													title="Add to wishlist"
+												></a>
+												<h4 className="product-name">
+													<a href="product-default.html">
+														{latestProducts.name}
+													</a>
+												</h4>
+												<div className="ratings-container">
+													<div className="ratings-full">
+														<span
+															className="ratings"
+															style={{ width: "80%" }}
+														></span>
+														<span className="tooltiptext tooltip-top"></span>
+													</div>
+													<a
+														href="product-default.html"
+														className="rating-reviews"
+													>
+														(1 reviews)
+													</a>
+												</div>
+												<div className="product-pa-wrapper">
+													<div className="product-price">
+														<ins className="new-price">
+															${latestProducts.sale_price}
+														</ins>
+														<del className="old-price">
+															${latestProducts.base_price}
+														</del>
+													</div>
+													<div className="product-action">
+														<a
+															href="product-default.html"
+															className="btn-primary btn-product btn btn-link btn-underline"
+														>
+															Select Options
+														</a>
+													</div>
 												</div>
 											</div>
 										</div>
-									</div>
+									))}
 								</div>
+								{/* SECOND COLUMN */}
 								<div
 									className="swiper-slide swiper-slide-next"
 									role="group"
 									aria-label="2 / 5"
-									style={{ width: '208px', marginRight: '20px' }}
+									style={{ width: "208px", marginRight: "20px" }}
 								>
-									<div className="product product-image-gap product-simple">
-										<figure className="product-media">
-											<a href="product-default.html">
-												<img
-													src="./src/assets/img/products/2-3-1.jpg"
-													alt="Product"
-													width="295"
-													height="335"
-												/>
-												<img
-													src="./src/assets/img/products/2-3-2.jpg"
-													alt="Product"
-													width="295"
-													height="335"
-												/>
-											</a>
-
-											<div className="product-action">
-												<a
-													href="#"
-													className="btn-product btn-quickview"
-													title="Quick View"
-												>
-													Quick View
+									{latesProductsList.map((latestProducts, index) => (
+										<div className="product product-image-gap product-simple">
+											<figure className="product-media">
+												<a href="product-default.html">
+													<img
+														src={latestProducts.images[0]}
+														alt="Product"
+														width="295"
+														height="335"
+													/>
+													<img
+														src={latestProducts.images[1]}
+														alt="Product"
+														width="295"
+														height="335"
+													/>
 												</a>
-											</div>
-										</figure>
-										<div className="product-details">
-											<a
-												href="#"
-												className="btn-wishlist w-icon-heart"
-												title="Add to wishlist"
-											></a>
-											<h4 className="product-name">
-												<a href="product-default.html">Plastic Cup</a>
-											</h4>
-											<div className="ratings-container">
-												<div className="ratings-full">
-													<span
-														className="ratings"
-														style={{ width: '0%' }}
-													></span>
-													<span className="tooltiptext tooltip-top"></span>
-												</div>
-												<a
-													href="product-default.html"
-													className="rating-reviews"
-												>
-													(0 reviews)
-												</a>
-											</div>
-											<div className="product-pa-wrapper">
-												<div className="product-price">
-													<ins className="new-price">$10.62</ins>
-												</div>
 												<div className="product-action">
 													<a
-														href="#"
-														className="btn-cart btn-product btn btn-link btn-underline"
+														href="/productDefault"
+														className="btn-product btn-quickview"
+														title="Quick View"
+														onClick={localStorage.setItem("product_Id", latestProducts._id)
+														}
 													>
-														Add To Cart
+														Quick View
 													</a>
+												</div>
+											</figure>
+											<div className="product-details">
+												<a
+													href="/productDefault"
+													className="btn-wishlist w-icon-heart"
+													title="Add to wishlist"
+												></a>
+												<h4 className="product-name">
+													<a href="product-default.html">{latestProducts.name}</a>
+												</h4>
+												<div className="ratings-container">
+													<div className="ratings-full">
+														<span
+															className="ratings"
+															style={{ width: "0%" }}
+														></span>
+														<span className="tooltiptext tooltip-top"></span>
+													</div>
+													<a
+														href="product-default.html"
+														className="rating-reviews"
+													>
+														(0 reviews)
+													</a>
+												</div>
+												<div className="product-pa-wrapper">
+													<div className="product-price">
+														<ins className="new-price">$10.62</ins>
+													</div>
+													<div className="product-action">
+														<a
+															href="/cart"
+															className="btn-cart btn-product btn btn-link btn-underline"
+														>
+															Add To Cart
+														</a>
+													</div>
 												</div>
 											</div>
 										</div>
-									</div>
-									<div className="product product-image-gap product-simple">
-										<figure className="product-media">
-											<a href="product-default.html">
-												<img
-													src="./src/assets/img/products/2-7-1.jpg"
-													alt="Product"
-													width="295"
-													height="335"
-												/>
-												<img
-													src="./src/assets/img/products/2-7-2.jpg"
-													alt="Product"
-													width="295"
-													height="335"
-												/>
-											</a>
-
-											<div className="product-action">
-												<a
-													href="#"
-													className="btn-product btn-quickview"
-													title="Quick View"
-												>
-													Quick View
-												</a>
-											</div>
-										</figure>
-										<div className="product-details">
-											<a
-												href="#"
-												className="btn-wishlist w-icon-heart"
-												title="Add to wishlist"
-											></a>
-											<h4 className="product-name">
-												<a href="product-default.html">Charming Watch</a>
-											</h4>
-											<div className="ratings-container">
-												<div className="ratings-full">
-													<span
-														className="ratings"
-														style={{ width: '40%' }}
-													></span>
-													<span className="tooltiptext tooltip-top"></span>
-												</div>
-												<a
-													href="product-default.html"
-													className="rating-reviews"
-												>
-													(1 reviews)
-												</a>
-											</div>
-											<div className="product-pa-wrapper">
-												<div className="product-price">
-													<ins className="new-price">$30.73</ins>
-													<del className="old-price">$34.38</del>
-												</div>
-												<div className="product-action">
-													<a
-														href="#"
-														className="btn-cart btn-product btn btn-link btn-underline"
-													>
-														Add To Cart
-													</a>
-												</div>
-											</div>
-										</div>
-									</div>
+									))}
 								</div>
+
+
+								{/* THIRD COLUMN */}
 								<div
 									className="swiper-slide"
 									role="group"
 									aria-label="3 / 5"
-									style={{ width: '208px', marginRight: '20px' }}
+									style={{ width: "208px", marginRight: "20px" }}
 								>
-									<div className="product product-image-gap product-simple">
-										<figure className="product-media">
-											<a href="product-default.html">
-												<img
-													src="./src/assets/img/products/2-4-1.jpg"
-													alt="Product"
-													width="295"
-													height="335"
-												/>
-												<img
-													src="./src/assets/img/products/2-4-2.jpg"
-													alt="Product"
-													width="295"
-													height="335"
-												/>
-											</a>
-
-											<div className="product-action">
-												<a
-													href="#"
-													className="btn-product btn-quickview"
-													title="Quick View"
-												>
-													Quick View
-												</a>
-											</div>
-										</figure>
-										<div className="product-details">
-											<a
-												href="#"
-												className="btn-wishlist w-icon-heart"
-												title="Add to wishlist"
-											></a>
-											<h4 className="product-name">
+									{latesProductsList.map((latestProducts, index) => (
+										<div className="product product-image-gap product-simple">
+											<figure className="product-media">
 												<a href="product-default.html">
-													Wonderful Sound Music Player
+													<img
+														src={latestProducts.images[0]}
+														alt="Product"
+														width="295"
+														height="335"
+													/>
+													<img
+														src={latestProducts.images[1]}
+														alt="Product"
+														width="295"
+														height="335"
+													/>
 												</a>
-											</h4>
-											<div className="ratings-container">
-												<div className="ratings-full">
-													<span
-														className="ratings"
-														style={{ width: '60%' }}
-													></span>
-													<span className="tooltiptext tooltip-top"></span>
-												</div>
-												<a
-													href="product-default.html"
-													className="rating-reviews"
-												>
-													(1 reviews)
-												</a>
-											</div>
-											<div className="product-pa-wrapper">
-												<div className="product-price">
-													<ins className="new-price">$80.15</ins>
-													<del className="old-price">$84.30</del>
-												</div>
+
 												<div className="product-action">
 													<a
-														href="#"
-														className="btn-cart btn-product btn btn-link btn-underline"
+														href="/productDefault"
+														className="btn-product btn-quickview"
+														title="Quick View"
+														onClick={localStorage.setItem("product_Id", latestProducts._id)
+														}
 													>
-														Add To Cart
+														Quick View
 													</a>
+												</div>
+											</figure>
+											<div className="product-details">
+												<a
+													href="#"
+													className="btn-wishlist w-icon-heart"
+													title="Add to wishlist"
+												></a>
+												<h4 className="product-name">
+													<a href="product-default.html">{latestProducts.name}</a>
+												</h4>
+												<div className="ratings-container">
+													<div className="ratings-full">
+														<span
+															className="ratings"
+															style={{ width: "0%" }}
+														></span>
+														<span className="tooltiptext tooltip-top"></span>
+													</div>
+													<a
+														href="product-default.html"
+														className="rating-reviews"
+													>
+														(0 reviews)
+													</a>
+												</div>
+												<div className="product-pa-wrapper">
+													<div className="product-price">
+														<ins className="new-price">${latestProducts.base_price}</ins>
+													</div>
+													<div className="product-action">
+														<a
+															href="/cart"
+															className="btn-cart btn-product btn btn-link btn-underline"
+														>
+															Add To Cart
+														</a>
+													</div>
 												</div>
 											</div>
 										</div>
-									</div>
-									<div className="product product-image-gap product-simple">
-										<figure className="product-media">
-											<a href="product-default.html">
-												<img
-													src="./src/assets/img/products/2-8-1.jpg"
-													alt="Product"
-													width="295"
-													height="335"
-												/>
-												<img
-													src="./src/assets/img/products/2-8-2.jpg"
-													alt="Product"
-													width="295"
-													height="335"
-												/>
-											</a>
-
-											<div className="product-action">
-												<a
-													href="#"
-													className="btn-product btn-quickview"
-													title="Quick View"
-												>
-													Quick View
-												</a>
-											</div>
-										</figure>
-										<div className="product-details">
-											<a
-												href="#"
-												className="btn-wishlist w-icon-heart"
-												title="Add to wishlist"
-											></a>
-											<h4 className="product-name">
-												<a href="product-default.html">
-													Mobile Electronic Recorder
-												</a>
-											</h4>
-											<div className="ratings-container">
-												<div className="ratings-full">
-													<span
-														className="ratings"
-														style={{ width: '20%' }}
-													></span>
-													<span className="tooltiptext tooltip-top"></span>
-												</div>
-												<a
-													href="product-default.html"
-													className="rating-reviews"
-												>
-													(1 reviews)
-												</a>
-											</div>
-											<div className="product-pa-wrapper">
-												<div className="product-price">
-													<ins className="new-price">$59.26</ins>
-													<del className="old-price">$63.27</del>
-												</div>
-												<div className="product-action">
-													<a
-														href="#"
-														className="btn-cart btn-product btn btn-link btn-underline"
-													>
-														Add To Cart
-													</a>
-												</div>
-											</div>
-										</div>
-									</div>
+									))}
 								</div>
+								{/* FOURTH COLUMN */}
 								<div
 									className="swiper-slide"
 									role="group"
 									aria-label="4 / 5"
-									style={{ width: '208px', marginRight: '20px' }}
+									style={{ width: "208px", marginRight: "20px" }}
 								>
-									<div className="product product-image-gap product-simple">
-										<figure className="product-media">
-											<a href="product-default.html">
-												<img
-													src="./src/assets/img/products/3-1-1.jpg"
-													alt="Product"
-													width="295"
-													height="335"
-												/>
-												<img
-													src="./src/assets/img/products/3-1-2.jpg"
-													alt="Product"
-													width="295"
-													height="335"
-												/>
-											</a>
+									{latesProductsList.map((latestProducts, index) => (
+										<div className="product product-image-gap product-simple">
+											<figure className="product-media">
+												<a href="product-default.html">
+													<img
+														src={latestProducts.images[0]}
+														alt="Product"
+														width="295"
+														height="335"
+													/>
+													<img
+														src={latestProducts.images[1]}
+														alt="Product"
+														width="295"
+														height="335"
+													/>
+												</a>
 
-											<div className="product-action">
-												<a
-													href="#"
-													className="btn-product btn-quickview"
-													title="Quick View"
-												>
-													Quick View
-												</a>
-											</div>
-										</figure>
-										<div className="product-details">
-											<a
-												href="#"
-												className="btn-wishlist w-icon-heart"
-												title="Add to wishlist"
-											></a>
-											<h4 className="product-name">
-												<a href="product-default.html">Red Cap Sound Marker</a>
-											</h4>
-											<div className="ratings-container">
-												<div className="ratings-full">
-													<span
-														className="ratings"
-														style={{ width: '0%' }}
-													></span>
-													<span className="tooltiptext tooltip-top"></span>
-												</div>
-												<a
-													href="product-default.html"
-													className="rating-reviews"
-												>
-													(0 reviews)
-												</a>
-											</div>
-											<div className="product-pa-wrapper">
-												<div className="product-price">
-													<ins className="new-price">$31.00</ins>
-												</div>
 												<div className="product-action">
 													<a
-														href="#"
-														className="btn-cart btn-product btn btn-link btn-underline"
+														href="/productDefault"
+														className="btn-product btn-quickview"
+														title="Quick View"
+														onClick={localStorage.setItem("product_Id", latestProducts._id)
+														}
 													>
-														Add To Cart
+														Quick View
 													</a>
+												</div>
+											</figure>
+											<div className="product-details">
+												<a
+													href="/productDefault"
+													className="btn-wishlist w-icon-heart"
+													title="Add to wishlist"
+												></a>
+												<h4 className="product-name">
+													<a href="product-default.html">{latestProducts.name}</a>
+												</h4>
+												<div className="ratings-container">
+													<div className="ratings-full">
+														<span
+															className="ratings"
+															style={{ width: "0%" }}
+														></span>
+														<span className="tooltiptext tooltip-top"></span>
+													</div>
+													<a
+														href="product-default.html"
+														className="rating-reviews"
+													>
+														(0 reviews)
+													</a>
+												</div>
+												<div className="product-pa-wrapper">
+													<div className="product-price">
+														<ins className="new-price">$10.62</ins>
+													</div>
+													<div className="product-action">
+														<a
+															href="#"
+															className="btn-cart btn-product btn btn-link btn-underline"
+														>
+															Add To Cart
+														</a>
+													</div>
 												</div>
 											</div>
 										</div>
-									</div>
-									<div className="product product-image-gap product-simple">
-										<figure className="product-media">
-											<a href="product-default.html">
-												<img
-													src="./src/assets/img/products/3-2-1.jpg"
-													alt="Product"
-													width="295"
-													height="335"
-												/>
-												<img
-													src="./src/assets/img/products/3-2-2.jpg"
-													alt="Product"
-													width="295"
-													height="335"
-												/>
-											</a>
-
-											<div className="product-action">
-												<a
-													href="#"
-													className="btn-product btn-quickview"
-													title="Quick View"
-												>
-													Quick View
-												</a>
-											</div>
-										</figure>
-										<div className="product-details">
-											<a
-												href="#"
-												className="btn-wishlist w-icon-heart"
-												title="Add to wishlist"
-											></a>
-											<h4 className="product-name">
-												<a href="product-default.html">Wireless Mouse</a>
-											</h4>
-											<div className="ratings-container">
-												<div className="ratings-full">
-													<span
-														className="ratings"
-														style={{ width: '0%' }}
-													></span>
-													<span className="tooltiptext tooltip-top"></span>
-												</div>
-												<a
-													href="product-default.html"
-													className="rating-reviews"
-												>
-													(0 reviews)
-												</a>
-											</div>
-											<div className="product-pa-wrapper">
-												<div className="product-price">
-													<ins className="new-price">$25.78</ins>
-												</div>
-												<div className="product-action">
-													<a
-														href="#"
-														className="btn-cart btn-product btn btn-link btn-underline"
-													>
-														Add To Cart
-													</a>
-												</div>
-											</div>
-										</div>
-									</div>
+									))}
 								</div>
+								{/* FIFTH COLUMN */}
 								<div
 									className="swiper-slide"
 									role="group"
 									aria-label="5 / 5"
-									style={{ width: '208px', marginRight: '20px' }}
+									style={{ width: "208px", marginRight: "20px" }}
 								>
-									<div className="product product-image-gap product-simple">
-										<figure className="product-media">
-											<a href="product-default.html">
-												<img
-													src="./src/assets/img/products/2-1-1.jpg"
-													alt="Product"
-													width="295"
-													height="335"
-												/>
-												<img
-													src="./src/assets/img/products/2-1-2.jpg"
-													alt="Product"
-													width="295"
-													height="335"
-												/>
-											</a>
-
-											<div className="product-action">
-												<a
-													href="#"
-													className="btn-product btn-quickview"
-													title="Quick View"
-												>
-													Quick View
-												</a>
-											</div>
-										</figure>
-										<div className="product-details">
-											<a
-												href="#"
-												className="btn-wishlist w-icon-heart"
-												title="Add to wishlist"
-											></a>
-											<h4 className="product-name">
+									{latesProductsList.map((latestProducts, index) => (
+										<div className="product product-image-gap product-simple">
+											<figure className="product-media">
 												<a href="product-default.html">
-													Multi-colorful Music Player
+													<img
+														src={latestProducts.images[0]}
+														alt="Product"
+														width="295"
+														height="335"
+													/>
+													<img
+														src={latestProducts.images[1]}
+														alt="Product"
+														width="295"
+														height="335"
+													/>
 												</a>
-											</h4>
-											<div className="ratings-container">
-												<div className="ratings-full">
-													<span
-														className="ratings"
-														style={{ width: '80%' }}
-													></span>
-													<span className="tooltiptext tooltip-top"></span>
-												</div>
-												<a
-													href="product-default.html"
-													className="rating-reviews"
-												>
-													(1 reviews)
-												</a>
-											</div>
-											<div className="product-pa-wrapper">
-												<div className="product-price">
-													<ins className="new-price">$60.11</ins>
-													<del className="old-price">$72.83</del>
-												</div>
 												<div className="product-action">
 													<a
-														href="#"
-														className="btn-cart btn-product btn btn-link btn-underline"
+														href="/productDefault"
+														className="btn-product btn-quickview"
+														title="Quick View"
+														onClick={localStorage.setItem("product_Id", latestProducts._id)
+														}
 													>
-														Add To Cart
+														Quick View
 													</a>
+												</div>
+											</figure>
+											<div className="product-details">
+												<a
+													href="#"
+													className="btn-wishlist w-icon-heart"
+													title="Add to wishlist"
+												></a>
+												<h4 className="product-name">
+													<a href="product-default.html">{latestProducts.name}</a>
+												</h4>
+												<div className="ratings-container">
+													<div className="ratings-full">
+														<span
+															className="ratings"
+															style={{ width: "0%" }}
+														></span>
+														<span className="tooltiptext tooltip-top"></span>
+													</div>
+													<a
+														href="product-default.html"
+														className="rating-reviews"
+													>
+														(0 reviews)
+													</a>
+												</div>
+												<div className="product-pa-wrapper">
+													<div className="product-price">
+														<ins className="new-price">${latestProducts.base_price}</ins>
+													</div>
+													<div className="product-action">
+														<a
+															href="#"
+															className="btn-cart btn-product btn btn-link btn-underline"
+														>
+															Add To Cart
+														</a>
+													</div>
 												</div>
 											</div>
 										</div>
-									</div>
-									<div className="product product-image-gap product-simple">
-										<figure className="product-media">
-											<a href="product-default.html">
-												<img
-													src="./src/assets/img/products/2-5-1.jpg"
-													alt="Product"
-													width="295"
-													height="335"
-												/>
-												<img
-													src="./src/assets/img/products/2-5-2.jpg"
-													alt="Product"
-													width="295"
-													height="335"
-												/>
-											</a>
-
-											<div className="product-action">
-												<a
-													href="#"
-													className="btn-product btn-quickview"
-													title="Quick View"
-												>
-													Quick View
-												</a>
-											</div>
-										</figure>
-										<div className="product-details">
-											<a
-												href="#"
-												className="btn-wishlist w-icon-heart"
-												title="Add to wishlist"
-											></a>
-											<h4 className="product-name">
-												<a href="product-default.html">
-													Cavin Fashion Suede Hand bag
-												</a>
-											</h4>
-											<div className="ratings-container">
-												<div className="ratings-full">
-													<span
-														className="ratings"
-														style={{ width: '20%' }}
-													></span>
-													<span className="tooltiptext tooltip-top"></span>
-												</div>
-												<a
-													href="product-default.html"
-													className="rating-reviews"
-												>
-													(1 reviews)
-												</a>
-											</div>
-											<div className="product-pa-wrapper">
-												<div className="product-price">
-													<ins className="new-price">$25.70</ins>
-												</div>
-												<div className="product-action">
-													<a
-														href="#"
-														className="btn-cart btn-product btn btn-link btn-underline"
-													>
-														Add To Cart
-													</a>
-												</div>
-											</div>
-										</div>
-									</div>
+									))}
 								</div>
 							</div>
 							<span
@@ -851,36 +515,36 @@ function LatestProducts() {
 						<div
 							className="swiper-container swiper-theme latest-product-wrapper shadow-swiper appear-animate mb-0 swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events fadeIn appear-animation-visible"
 							data-swiper-options="{
-                                            'spaceBetween': 20,
-                                            'slidesPerView': 2,
-                                            'breakpoints': {
-                                                '576': {
-                                                    'slidesPerView': 2
-                                                },
-                                                '768': {
-                                                    'slidesPerView': 3
-                                                },
-                                                '992': {
-                                                    'slidesPerView': 4
-                                                },
-                                                '1200': {
-                                                    'slidesPerView': 5
-                                                }
-                                            }
-                                            }"
-							style={{ animationDuration: '1.2s' }}
+											  'spaceBetween': 20,
+											  'slidesPerView': 2,
+											  'breakpoints': {
+												  '576': {
+													  'slidesPerView': 2
+												  },
+												  '768': {
+													  'slidesPerView': 3
+												  },
+												  '992': {
+													  'slidesPerView': 4
+												  },
+												  '1200': {
+													  'slidesPerView': 5
+												  }
+											  }
+											  }"
+							style={{ animationDuration: "1.2s" }}
 						>
 							<div
 								className="swiper-wrapper "
 								id="swiper-wrapper-877f51cb6233ec5f"
 								aria-live="polite"
-								style={{ transform: 'translate3d(0px, 0px, 0px)' }}
+								style={{ transform: "translate3d(0px, 0px, 0px)" }}
 							>
 								<div
 									className="swiper-slide swiper-slide-active"
 									role="group"
 									aria-label="1 / 6"
-									style={{ width: '208px', marginRight: '20px' }}
+									style={{ width: "208px", marginRight: "20px" }}
 								>
 									<div className="product product-image-gap product-simple">
 										<figure className="product-media">
@@ -908,7 +572,7 @@ function LatestProducts() {
 													Quick View
 												</a>
 											</div>
-											<div className="product-countdown-container">
+											{/* <div className="product-countdown-container">
 												<div
 													className="product-countdown countdown-compact is-countdown"
 													data-until="2024, 12, 9"
@@ -935,11 +599,11 @@ function LatestProducts() {
 														</span>
 													</span>
 												</div>
-											</div>
+											</div> */}
 										</figure>
 										<div className="product-details">
 											<a
-												href="#"
+												href="/productDefault"
 												className="btn-wishlist w-icon-heart"
 												title="Add to wishlist"
 											></a>
@@ -950,7 +614,7 @@ function LatestProducts() {
 												<div className="ratings-full">
 													<span
 														className="ratings"
-														style={{ width: '80%' }}
+														style={{ width: "80%" }}
 													></span>
 													<span className="tooltiptext tooltip-top"></span>
 												</div>
@@ -963,8 +627,8 @@ function LatestProducts() {
 											</div>
 											<div className="product-pa-wrapper">
 												<div className="product-price">
-													<ins className="new-price">$25.68</ins>
-													<del className="old-price">$30.45</del>
+													<ins className="new-price">{latesProductsList.base_price}</ins>
+													<del className="old-price">{latesProductsList.sale_price}</del>
 												</div>
 												<div className="product-action">
 													<a
@@ -1047,7 +711,7 @@ function LatestProducts() {
 												<div className="ratings-full">
 													<span
 														className="ratings"
-														style={{ width: '80%' }}
+														style={{ width: "80%" }}
 													></span>
 													<span className="tooltiptext tooltip-top"></span>
 												</div>
@@ -1078,7 +742,7 @@ function LatestProducts() {
 									className="swiper-slide swiper-slide-next"
 									role="group"
 									aria-label="2 / 6"
-									style={{ width: '208px', marginRight: '20px' }}
+									style={{ width: "208px", marginRight: "20px" }}
 								>
 									<div className="product product-image-gap product-simple">
 										<figure className="product-media">
@@ -1120,7 +784,7 @@ function LatestProducts() {
 												<div className="ratings-full">
 													<span
 														className="ratings"
-														style={{ width: '0%' }}
+														style={{ width: "0%" }}
 													></span>
 													<span className="tooltiptext tooltip-top"></span>
 												</div>
@@ -1186,7 +850,7 @@ function LatestProducts() {
 												<div className="ratings-full">
 													<span
 														className="ratings"
-														style={{ width: '40%' }}
+														style={{ width: "40%" }}
 													></span>
 													<span className="tooltiptext tooltip-top"></span>
 												</div>
@@ -1218,7 +882,7 @@ function LatestProducts() {
 									className="swiper-slide"
 									role="group"
 									aria-label="3 / 6"
-									style={{ width: '208px', marginRight: '20px' }}
+									style={{ width: "208px", marginRight: "20px" }}
 								>
 									<div className="product product-image-gap product-simple">
 										<figure className="product-media">
@@ -1262,7 +926,7 @@ function LatestProducts() {
 												<div className="ratings-full">
 													<span
 														className="ratings"
-														style={{ width: '60%' }}
+														style={{ width: "60%" }}
 													></span>
 													<span className="tooltiptext tooltip-top"></span>
 												</div>
@@ -1331,7 +995,7 @@ function LatestProducts() {
 												<div className="ratings-full">
 													<span
 														className="ratings"
-														style={{ width: '20%' }}
+														style={{ width: "20%" }}
 													></span>
 													<span className="tooltiptext tooltip-top"></span>
 												</div>
@@ -1363,7 +1027,7 @@ function LatestProducts() {
 									className="swiper-slide"
 									role="group"
 									aria-label="4 / 6"
-									style={{ width: '208px', marginRight: '20px' }}
+									style={{ width: "208px", marginRight: "20px" }}
 								>
 									<div className="product product-image-gap product-simple">
 										<figure className="product-media">
@@ -1405,7 +1069,7 @@ function LatestProducts() {
 												<div className="ratings-full">
 													<span
 														className="ratings"
-														style={{ width: '0%' }}
+														style={{ width: "0%" }}
 													></span>
 													<span className="tooltiptext tooltip-top"></span>
 												</div>
@@ -1471,7 +1135,7 @@ function LatestProducts() {
 												<div className="ratings-full">
 													<span
 														className="ratings"
-														style={{ width: '0%' }}
+														style={{ width: "0%" }}
 													></span>
 													<span className="tooltiptext tooltip-top"></span>
 												</div>
@@ -1502,7 +1166,7 @@ function LatestProducts() {
 									className="swiper-slide"
 									role="group"
 									aria-label="5 / 6"
-									style={{ width: '208px', marginRight: '20px' }}
+									style={{ width: "208px", marginRight: "20px" }}
 								>
 									<div className="product product-image-gap product-simple">
 										<figure className="product-media">
@@ -1546,7 +1210,7 @@ function LatestProducts() {
 												<div className="ratings-full">
 													<span
 														className="ratings"
-														style={{ width: '80%' }}
+														style={{ width: "80%" }}
 													></span>
 													<span className="tooltiptext tooltip-top"></span>
 												</div>
@@ -1615,7 +1279,7 @@ function LatestProducts() {
 												<div className="ratings-full">
 													<span
 														className="ratings"
-														style={{ width: '20%' }}
+														style={{ width: "20%" }}
 													></span>
 													<span className="tooltiptext tooltip-top"></span>
 												</div>
@@ -1646,7 +1310,7 @@ function LatestProducts() {
 									className="swiper-slide"
 									role="group"
 									aria-label="6 / 6"
-									style={{ width: '208px', marginRight: '20px' }}
+									style={{ width: "208px", marginRight: "20px" }}
 								>
 									<div className="product product-image-gap product-simple">
 										<figure className="product-media">
@@ -1688,7 +1352,7 @@ function LatestProducts() {
 												<div className="ratings-full">
 													<span
 														className="ratings"
-														style={{ width: '80%' }}
+														style={{ width: "80%" }}
 													></span>
 													<span className="tooltiptext tooltip-top"></span>
 												</div>
@@ -1757,7 +1421,7 @@ function LatestProducts() {
 												<div className="ratings-full">
 													<span
 														className="ratings"
-														style={{ width: '100%' }}
+														style={{ width: "100%" }}
 													></span>
 													<span className="tooltiptext tooltip-top"></span>
 												</div>
@@ -1798,36 +1462,36 @@ function LatestProducts() {
 						<div
 							className="swiper-container swiper-theme latest-product-wrapper shadow-swiper appear-animate mb-0 swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events fadeIn appear-animation-visible"
 							data-swiper-options="{
-                                            'spaceBetween': 20,
-                                            'slidesPerView': 2,
-                                            'breakpoints': {
-                                                '576': {
-                                                    'slidesPerView': 2
-                                                },
-                                                '768': {
-                                                    'slidesPerView': 3
-                                                },
-                                                '992': {
-                                                    'slidesPerView': 4
-                                                },
-                                                '1200': {
-                                                    'slidesPerView': 5
-                                                }
-                                            }
-                                            }"
-							style={{ animationDuration: '1.2s' }}
+											  'spaceBetween': 20,
+											  'slidesPerView': 2,
+											  'breakpoints': {
+												  '576': {
+													  'slidesPerView': 2
+												  },
+												  '768': {
+													  'slidesPerView': 3
+												  },
+												  '992': {
+													  'slidesPerView': 4
+												  },
+												  '1200': {
+													  'slidesPerView': 5
+												  }
+											  }
+											  }"
+							style={{ animationDuration: "1.2s" }}
 						>
 							<div
 								className="swiper-wrapper "
 								id="swiper-wrapper-81ef13327e6b32f5"
 								aria-live="polite"
-								style={{ transform: 'translate3d(0px, 0px, 0px)' }}
+								style={{ transform: "translate3d(0px, 0px, 0px)" }}
 							>
 								<div
 									className="swiper-slide swiper-slide-active"
 									role="group"
 									aria-label="1 / 6"
-									style={{ width: '208px', marginRight: '20px' }}
+									style={{ width: "208px", marginRight: "20px" }}
 								>
 									<div className="product product-image-gap product-simple">
 										<figure className="product-media">
@@ -1897,7 +1561,7 @@ function LatestProducts() {
 												<div className="ratings-full">
 													<span
 														className="ratings"
-														style={{ width: '80%' }}
+														style={{ width: "80%" }}
 													></span>
 													<span className="tooltiptext tooltip-top"></span>
 												</div>
@@ -1994,7 +1658,7 @@ function LatestProducts() {
 												<div className="ratings-full">
 													<span
 														className="ratings"
-														style={{ width: '80%' }}
+														style={{ width: "80%" }}
 													></span>
 													<span className="tooltiptext tooltip-top"></span>
 												</div>
@@ -2025,7 +1689,7 @@ function LatestProducts() {
 									className="swiper-slide swiper-slide-next"
 									role="group"
 									aria-label="2 / 6"
-									style={{ width: '208px', marginRight: '20px' }}
+									style={{ width: "208px", marginRight: "20px" }}
 								>
 									<div className="product product-image-gap product-simple">
 										<figure className="product-media">
@@ -2067,7 +1731,7 @@ function LatestProducts() {
 												<div className="ratings-full">
 													<span
 														className="ratings"
-														style={{ width: ' 0%' }}
+														style={{ width: " 0%" }}
 													></span>
 													<span className="tooltiptext tooltip-top"></span>
 												</div>
@@ -2133,7 +1797,7 @@ function LatestProducts() {
 												<div className="ratings-full">
 													<span
 														className="ratings"
-														style={{ width: '40%' }}
+														style={{ width: "40%" }}
 													></span>
 													<span className="tooltiptext tooltip-top"></span>
 												</div>
@@ -2165,7 +1829,7 @@ function LatestProducts() {
 									className="swiper-slide"
 									role="group"
 									aria-label="3 / 6"
-									style={{ width: '208px', marginRight: '20px' }}
+									style={{ width: "208px", marginRight: "20px" }}
 								>
 									<div className="product product-image-gap product-simple">
 										<figure className="product-media">
@@ -2209,7 +1873,7 @@ function LatestProducts() {
 												<div className="ratings-full">
 													<span
 														className="ratings"
-														style={{ width: '60%' }}
+														style={{ width: "60%" }}
 													></span>
 													<span className="tooltiptext tooltip-top"></span>
 												</div>
@@ -2278,7 +1942,7 @@ function LatestProducts() {
 												<div className="ratings-full">
 													<span
 														className="ratings"
-														style={{ width: '20%' }}
+														style={{ width: "20%" }}
 													></span>
 													<span className="tooltiptext tooltip-top"></span>
 												</div>
@@ -2310,7 +1974,7 @@ function LatestProducts() {
 									className="swiper-slide"
 									role="group"
 									aria-label="4 / 6"
-									style={{ width: '208px', marginRight: '20px' }}
+									style={{ width: "208px", marginRight: "20px" }}
 								>
 									<div className="product product-image-gap product-simple">
 										<figure className="product-media">
@@ -2352,7 +2016,7 @@ function LatestProducts() {
 												<div className="ratings-full">
 													<span
 														className="ratings"
-														style={{ width: '0%' }}
+														style={{ width: "0%" }}
 													></span>
 													<span className="tooltiptext tooltip-top"></span>
 												</div>
@@ -2418,7 +2082,7 @@ function LatestProducts() {
 												<div className="ratings-full">
 													<span
 														className="ratings"
-														style={{ width: '0%' }}
+														style={{ width: "0%" }}
 													></span>
 													<span className="tooltiptext tooltip-top"></span>
 												</div>
@@ -2449,7 +2113,7 @@ function LatestProducts() {
 									className="swiper-slide"
 									role="group"
 									aria-label="5 / 6"
-									style={{ width: '208px', marginRight: '20px' }}
+									style={{ width: "208px", marginRight: "20px" }}
 								>
 									<div className="product product-image-gap product-simple">
 										<figure className="product-media">
@@ -2493,7 +2157,7 @@ function LatestProducts() {
 												<div className="ratings-full">
 													<span
 														className="ratings"
-														style={{ width: '80%' }}
+														style={{ width: "80%" }}
 													></span>
 													<span className="tooltiptext tooltip-top"></span>
 												</div>
@@ -2562,7 +2226,7 @@ function LatestProducts() {
 												<div className="ratings-full">
 													<span
 														className="ratings"
-														style={{ width: '20%' }}
+														style={{ width: "20%" }}
 													></span>
 													<span className="tooltiptext tooltip-top"></span>
 												</div>
@@ -2593,7 +2257,7 @@ function LatestProducts() {
 									className="swiper-slide"
 									role="group"
 									aria-label="6 / 6"
-									style={{ width: '208px', marginRight: '20px' }}
+									style={{ width: "208px", marginRight: "20px" }}
 								>
 									<div className="product product-image-gap product-simple">
 										<figure className="product-media">
@@ -2635,7 +2299,7 @@ function LatestProducts() {
 												<div className="ratings-full">
 													<span
 														className="ratings"
-														style={{ width: '80%' }}
+														style={{ width: "80%" }}
 													></span>
 													<span className="tooltiptext tooltip-top"></span>
 												</div>
@@ -2704,7 +2368,7 @@ function LatestProducts() {
 												<div className="ratings-full">
 													<span
 														className="ratings"
-														style={{ width: '100%' }}
+														style={{ width: "100%" }}
 													></span>
 													<span className="tooltiptext tooltip-top"></span>
 												</div>
@@ -2745,36 +2409,36 @@ function LatestProducts() {
 						<div
 							className="swiper-container swiper-theme latest-product-wrapper shadow-swiper appear-animate mb-0 swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events fadeIn appear-animation-visible"
 							data-swiper-options="{
-                                                                        'spaceBetween': 20,
-                                                                        'slidesPerView': 2,
-                                                                        'breakpoints': {
-                                                                            '576': {
-                                                                                'slidesPerView': 2
-                                                                            },
-                                                                            '768': {
-                                                                                'slidesPerView': 3
-                                                                            },
-                                                                            '992': {
-                                                                                'slidesPerView': 4
-                                                                            },
-                                                                            '1200': {
-                                                                                'slidesPerView': 5
-                                                                            }
-                                                                        }
-                                                                        }"
-							style={{ animationDuration: '1.2s' }}
+																		  'spaceBetween': 20,
+																		  'slidesPerView': 2,
+																		  'breakpoints': {
+																			  '576': {
+																				  'slidesPerView': 2
+																			  },
+																			  '768': {
+																				  'slidesPerView': 3
+																			  },
+																			  '992': {
+																				  'slidesPerView': 4
+																			  },
+																			  '1200': {
+																				  'slidesPerView': 5
+																			  }
+																		  }
+																		  }"
+							style={{ animationDuration: "1.2s" }}
 						>
 							<div
 								className="swiper-wrapper "
 								id="swiper-wrapper-9b7310c6027baa0aa"
 								aria-live="polite"
-								style={{ transform: 'translate3d(0px, 0px, 0px)' }}
+								style={{ transform: "translate3d(0px, 0px, 0px)" }}
 							>
 								<div
 									className="swiper-slide swiper-slide-active"
 									role="group"
 									aria-label="1 / 6"
-									style={{ width: '208px', marginRight: '20px' }}
+									style={{ width: "208px", marginRight: "20px" }}
 								>
 									<div className="product product-image-gap product-simple">
 										<figure className="product-media">
@@ -2844,7 +2508,7 @@ function LatestProducts() {
 												<div className="ratings-full">
 													<span
 														className="ratings"
-														style={{ width: '80%' }}
+														style={{ width: "80%" }}
 													></span>
 													<span className="tooltiptext tooltip-top"></span>
 												</div>
@@ -2941,7 +2605,7 @@ function LatestProducts() {
 												<div className="ratings-full">
 													<span
 														className="ratings"
-														style={{ width: '80%' }}
+														style={{ width: "80%" }}
 													></span>
 													<span className="tooltiptext tooltip-top"></span>
 												</div>
@@ -2972,7 +2636,7 @@ function LatestProducts() {
 									className="swiper-slide swiper-slide-next"
 									role="group"
 									aria-label="2 / 6"
-									style={{ width: '208px', marginRight: '20px' }}
+									style={{ width: "208px", marginRight: "20px" }}
 								>
 									<div className="product product-image-gap product-simple">
 										<figure className="product-media">
@@ -3014,7 +2678,7 @@ function LatestProducts() {
 												<div className="ratings-full">
 													<span
 														className="ratings"
-														style={{ width: '0%' }}
+														style={{ width: "0%" }}
 													></span>
 													<span className="tooltiptext tooltip-top"></span>
 												</div>
@@ -3080,7 +2744,7 @@ function LatestProducts() {
 												<div className="ratings-full">
 													<span
 														className="ratings"
-														style={{ width: '40%' }}
+														style={{ width: "40%" }}
 													></span>
 													<span className="tooltiptext tooltip-top"></span>
 												</div>
@@ -3112,7 +2776,7 @@ function LatestProducts() {
 									className="swiper-slide"
 									role="group"
 									aria-label="3 / 6"
-									style={{ width: '208px', marginRight: '20px;' }}
+									style={{ width: "208px", marginRight: "20px;" }}
 								>
 									<div className="product product-image-gap product-simple">
 										<figure className="product-media">
@@ -3156,7 +2820,7 @@ function LatestProducts() {
 												<div className="ratings-full">
 													<span
 														className="ratings"
-														style={{ width: '60%' }}
+														style={{ width: "60%" }}
 													></span>
 													<span className="tooltiptext tooltip-top"></span>
 												</div>
@@ -3225,7 +2889,7 @@ function LatestProducts() {
 												<div className="ratings-full">
 													<span
 														className="ratings"
-														style={{ width: '20%' }}
+														style={{ width: "20%" }}
 													></span>
 													<span className="tooltiptext tooltip-top"></span>
 												</div>
@@ -3257,7 +2921,7 @@ function LatestProducts() {
 									className="swiper-slide"
 									role="group"
 									aria-label="4 / 6"
-									style={{ width: '208px', marginRight: '20px' }}
+									style={{ width: "208px", marginRight: "20px" }}
 								>
 									<div className="product product-image-gap product-simple">
 										<figure className="product-media">
@@ -3299,7 +2963,7 @@ function LatestProducts() {
 												<div className="ratings-full">
 													<span
 														className="ratings"
-														style={{ width: '0%' }}
+														style={{ width: "0%" }}
 													></span>
 													<span className="tooltiptext tooltip-top"></span>
 												</div>
@@ -3365,7 +3029,7 @@ function LatestProducts() {
 												<div className="ratings-full">
 													<span
 														className="ratings"
-														style={{ width: '0%' }}
+														style={{ width: "0%" }}
 													></span>
 													<span className="tooltiptext tooltip-top"></span>
 												</div>
@@ -3396,7 +3060,7 @@ function LatestProducts() {
 									className="swiper-slide"
 									role="group"
 									aria-label="5 / 6"
-									style={{ width: '208px', marginRight: '20px' }}
+									style={{ width: "208px", marginRight: "20px" }}
 								>
 									<div className="product product-image-gap product-simple">
 										<figure className="product-media">
@@ -3440,7 +3104,7 @@ function LatestProducts() {
 												<div className="ratings-full">
 													<span
 														className="ratings"
-														style={{ width: '80%' }}
+														style={{ width: "80%" }}
 													></span>
 													<span className="tooltiptext tooltip-top"></span>
 												</div>
@@ -3509,7 +3173,7 @@ function LatestProducts() {
 												<div className="ratings-full">
 													<span
 														className="ratings"
-														style={{ width: '20%' }}
+														style={{ width: "20%" }}
 													></span>
 													<span className="tooltiptext tooltip-top"></span>
 												</div>
@@ -3540,7 +3204,7 @@ function LatestProducts() {
 									className="swiper-slide"
 									role="group"
 									aria-label="6 / 6"
-									style={{ width: '208px', marginRight: '20px' }}
+									style={{ width: "208px", marginRight: "20px" }}
 								>
 									<div className="product product-image-gap product-simple">
 										<figure className="product-media">
@@ -3582,7 +3246,7 @@ function LatestProducts() {
 												<div className="ratings-full">
 													<span
 														className="ratings"
-														style={{ width: '80%' }}
+														style={{ width: "80%" }}
 													></span>
 													<span className="tooltiptext tooltip-top"></span>
 												</div>
@@ -3651,7 +3315,7 @@ function LatestProducts() {
 												<div className="ratings-full">
 													<span
 														className="ratings"
-														style={{ width: '100%' }}
+														style={{ width: "100%" }}
 													></span>
 													<span className="tooltiptext tooltip-top"></span>
 												</div>
@@ -3694,4 +3358,4 @@ function LatestProducts() {
 	);
 }
 
-export default LatestProducts;
+export default LatesProducts;
