@@ -274,4 +274,4 @@ function QuickView() {
 	);
 }
 
-export default quickView;
+export default QuickView;

@@ -1,12 +1,12 @@
-import React from 'react';
 import { Helmet } from 'react-helmet';
 import InnerHeader from '../components/InnerHeader';
 import ScrollTop from '../components/ScrollTop';
 import { Link } from 'react-router-dom';
 import LoginForm from '../components/checkout/LoginForm';
 import CouponForm from '../components/checkout/CouponForm';
-import Coupon from '../components/checkout/CouponForm';
 import CheckoutForm from '../components/checkout/CheckOutForm';
+import Footer from '../components/Footer';
+// eslint-disable-next-line react/prop-types
 function Checkout({ currentStep }) {
 	return (
 		<>
@@ -126,32 +126,58 @@ function Checkout({ currentStep }) {
 						</ul>
 					</div>
 				</nav>
+				<div className="page-content">
+					<div className="container">
+						<div className="login-toggle">
+							Returning customer?{' '}
+							<a
+								href="#"
+								className="show-login font-weight-bold text-uppercase text-dark"
+							>
+								Login
+							</a>
+						</div>
+						<LoginForm />
+						<div className="coupon-toggle">
+							Have a coupon?{' '}
+							<a
+								href="#"
+								className="show-coupon font-weight-bold text-uppercase text-dark"
+							>
+								Enter your code
+							</a>
+						</div>
+						<CouponForm />
+						<CheckoutForm />
+					</div>
+				</div>
 			</main>
-			<div className="page-content">
+			<Footer />
+			<div className="compare-popup">
 				<div className="container">
-					<div className="login-toggle">
-						Returning customer?{' '}
-						<a
-							href="#"
-							className="show-login font-weight-bold text-uppercase text-dark"
-						>
-							Login
-						</a>
+					<div className="compare-title">
+						<h4 className="title title-center">Compare Products</h4>
 					</div>
-					<LoginForm />
-					<div className="coupon-toggle">
-						Have a coupon?{' '}
-						<a
-							href="#"
-							className="show-coupon font-weight-bold text-uppercase text-dark"
-						>
-							Enter your code
-						</a>
-					</div>
-					<Coupon />
-					<CheckoutForm />
+					<ul className="compare-product-list list-style-none">
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+					<a href="#" className="btn btn-clean">
+						Clean All
+					</a>
+					<a
+						href="compare.html"
+						className="btn btn-dark btn-rounded"
+						data-previewlistener="true"
+					>
+						Start Compare!
+					</a>
 				</div>
 			</div>
+			<div className="compare-popup-overlay"></div>
+			<div className="minipopup-area"></div>
 			<ScrollTop />
 		</>
 	);

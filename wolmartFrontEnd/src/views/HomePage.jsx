@@ -121,15 +121,33 @@ function homePage() {
 					href="/assets/css/home.min.css"
 				/>
 				{/* Plugin JS Files */}
-				<script src="/assets/js/jquery.min.js"></script>
-				<script src="/assets/js/parallax.min.js"></script>
-				<script src="/assets/js/jquery.plugin.min.js"></script>
-				<script src="/assets/js/swiper-bundle.min.js"></script>
-				<script src="/assets/js/imagesloaded.pkgd.min.js"></script>
-				<script src="/assets/js/skrollr.min.js"></script>
-				<script src="/assets/js/jquery.magnific-popup.min.js"></script>
-				<script src="/assets/js/jquery.zoom.js"></script>
-				<script src="/assets/js/jquery.countdown.min.js"></script>
+				{/* <!-- jQuery --> */}
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+				{/* <!-- Parallax.js --> */}
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax.js/1.5.0/parallax.min.js"></script>
+
+				{/* <!-- jQuery Plugin (This might be customized; specify if you need a particular one) --> */}
+
+				{/* <!-- Swiper --> */}
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.2/swiper-bundle.min.js"></script>
+
+				{/* <!-- imagesLoaded --> */}
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/5.0.0/imagesloaded.pkgd.min.js"></script>
+
+				{/* <!-- Skrollr --> */}
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+
+				{/* <!-- Magnific Popup --> */}
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
+				{/* <!-- jQuery Zoom --> */}
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-zoom/1.7.21/jquery.zoom.min.js"></script>
+
+				{/* <!-- jQuery Countdown --> */}
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-countdown/2.2.0/jquery.countdown.min.js"></script>
+
+				{/* <!-- Main Script (customized, no CDN) --> */}
 				<script src="/assets/js/main.min.js"></script>
 			</Helmet>
 			<Header />
@@ -158,6 +176,31 @@ function homePage() {
 				<Ourclients />
 			</main>
 			<Footer />
+			<div className="compare-popup">
+				<div className="container">
+					<div className="compare-title">
+						<h4 className="title title-center">Compare Products</h4>
+					</div>
+					<ul className="compare-product-list list-style-none">
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+					<a href="#" className="btn btn-clean">
+						Clean All
+					</a>
+					<a
+						href="compare.html"
+						className="btn btn-dark btn-rounded"
+						data-previewlistener="true"
+					>
+						Start Compare!
+					</a>
+				</div>
+			</div>
+			<div className="compare-popup-overlay"></div>
+			<div className="minipopup-area"></div>
 			<ScrollTop />
 			<Newsletter />
 		</>
