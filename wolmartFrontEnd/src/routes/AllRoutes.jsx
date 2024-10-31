@@ -5,6 +5,7 @@ import ProductDefault from '../views/ProductDefault';
 import Cart from '../views/Cart';
 import Checkout from '../views/CheckOut';
 import Wishlist from '../views/Wishlist';
+import MyAccount from '../views/MyAccount';
 
 export const AllRoutes = () => {
 	return (
@@ -15,6 +16,7 @@ export const AllRoutes = () => {
 			<Route path="/cart" element={<Cart />} />
 			<Route path="/checkout" element={<Checkout />} />
 			<Route path="/wishlist" element={<Wishlist />} />
+			<Route path="/myAccount" element={<MyAccount />} />
 		</Routes>
 	);
 };
