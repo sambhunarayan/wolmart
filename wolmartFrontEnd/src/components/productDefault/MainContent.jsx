@@ -93,47 +93,6 @@ const MainContent = () => {
 										))}
 									</Swiper>
 								</div>
-								{/* <Swiper
-									className="product-single-swiper swiper-theme nav-inner"
-									navigation
-									thumbs={{ swiper: thumbsSwiper }}
-									slidesPerView={1}
-									>
-
-										{productDetails.images.map((image, index) => (
-										<SwiperSlide key={index}>
-										<figure className="product-image">
-											<img
-											src={image}
-											alt={`Product ${productDetails.name} ${index + 1}`}
-											width="800"
-											height="900"
-											/>
-										</figure>
-										</SwiperSlide>
-									))}
-								</Swiper>
-								<div className="product-thumbs-wrap">
-									<Swiper
-										onSwiper={setThumbsSwiper}
-										className="product-thumbs swiper-wrapper row cols-4 gutter-sm"
-										slidesPerView={4}
-										spaceBetween={10}
-										freeMode
-										watchSlidesProgress
-									>
-										{productDetails.images.map((image, index) => (
-										<SwiperSlide key={index} className="product-thumb">
-											<img
-											src={image}
-											alt={`Thumbnail ${productDetails.name} ${index + 1}`}
-											width="100"
-											height="112"
-											/>
-										</SwiperSlide>
-										))}
-									</Swiper>
-								</div> */}
 							</div>
 						</div>
 						<div className="col-md-6 mb-6 mb-md-8">
@@ -192,49 +151,54 @@ const MainContent = () => {
 
 								<hr className="product-divider" /> 
 								
-								{productDetails.variants_mapping && productDetails.variants_mapping.length > 0 && (
-  <div>
-    {productDetails.variants_mapping.map((variant, index) => (
-      <div key={index} className={`product-form product-variation-form product-${variant.attribute.toLowerCase()}-swatch`}>
-        {/* Display attribute label */}
-        <label className="mb-1">{variant.attribute}:</label>
+								{productDetails.variants_mapping && productDetails.variants_mapping.length > 0 ? (
+								<div>
+									{productDetails.variants_mapping.map((variant, index) => (
+									<div key={index} className={`product-form product-variation-form product-${variant.attribute.toLowerCase()}-swatch`}>
+										{/* Display attribute label */}
+										<label className="mb-1">{variant.attribute}:</label>
 
-        {/* Check if the attribute is "Size" */}
-        {variant.attribute === "Size" ? (
-          <div className="flex-wrap d-flex align-items-center product-variations">
-            {variant.attribute_values.map((value) => (
-              <a key={value._id} href="#" className="size">
-                {value.value}
-              </a>
-            ))}
-          </div>
-        ) : variant.attribute === "Colour" ? (
-          // If the attribute is "Colour", render color swatches
-          <div className="d-flex align-items-center product-variations">
-            {variant.attribute_values.map((value) => (
-              <a
-                key={value._id}
-                href="#"
-                className="color"
-                style={{ backgroundColor: value.value.toLowerCase() }}
-              ></a>
-            ))}
-          </div>
-        ) : null}
-        
-        {/* Clear all option */}
-        <a href="#" className="product-variation-clean" style={{ display: 'none' }}>
-          Clean All
-        </a>
-      </div>
-    ))}
-  </div>
-)}
-
-
-								<div className="product-variation-price">
-									<span></span>
+										{/* Check if the attribute is "Size" */}
+										{variant.attribute === "Size" ? (
+										<div className="flex-wrap d-flex align-items-center product-variations">
+											{variant.attribute_values.map((value) => (
+											<a key={value._id} href="#" className="size">
+												{value.value}
+											</a>
+											))}
+										</div>
+										) : variant.attribute === "Colour" ? (
+										// If the attribute is "Colour", render color swatches
+										<div className="d-flex align-items-center product-variations">
+											{variant.attribute_values.map((value) => (
+											<a
+												key={value._id}
+												href="#"
+												className="color"
+												style={{ backgroundColor: value.value.toLowerCase() }}
+											></a>
+											))}
+										</div>
+										) : null}
+										
+										{/* Clear all option */}
+										<a href="#" className="product-variation-clean" style={{ display: 'none' }}>
+										Clean All
+										</a>
+									</div>
+									))}
+									<div className="product-variation-price">
+										<span className="rupee">₹</span>{productDetails.sale_price}
+									</div>
 								</div>
+								):(
+									<div className="product-variation-price" style={{ display: 'block' }}>
+										<span className="rupee">₹</span>{productDetails.sale_price}
+									</div>
+								)}
+
+
+								
 
 								<div className="social-links-wrapper">
 									<div className="social-links">

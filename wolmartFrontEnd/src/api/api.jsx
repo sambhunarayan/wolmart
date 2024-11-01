@@ -3,7 +3,6 @@ import Cipher from "../utility/cipher";
 const apiUrl = import.meta.env.VITE_API_URL;
 const encKey = import.meta.env.VITE_ENC_KEY;
 const decKey = import.meta.env.VITE_DEC_KEY;
-console.log(encKey)
 
 const apiClient = axios.create({
   headers: {
