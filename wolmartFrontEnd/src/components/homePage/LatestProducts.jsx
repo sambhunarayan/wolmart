@@ -95,7 +95,7 @@ function LatesProducts({ latesProductsList }) {
                       <div className="product product-image-gap product-simple" key={index}>
                         <figure className="product-media">
 							
-                          <a href={'/productDefault/' + product._id} onClick={localStorage.setItem("product_Id", product._id)} >
+                          <a href={'/productDefault'} onClick={localStorage.setItem("product_Id", product._id)} >
                             <img src={product.images[0]} alt="Product" width="295" height="335" />
                             {product.images[1] && (
                               <img src={product.images[1]} alt="Product" width="295" height="335" />
@@ -103,7 +103,7 @@ function LatesProducts({ latesProductsList }) {
                           </a>
 						  <div className="product-action">
 							<a
-								href={'/productDefault/' + product._id}
+								href={'/productDefault'}
 								className="btn-product btn-quickview"
 								title="Quick View"
 								onClick={localStorage.setItem("product_Id", product._id)
