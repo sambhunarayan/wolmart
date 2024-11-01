@@ -1,5 +1,6 @@
 import axios from "axios";
 import Cipher from "../utility/cipher";
+const apiUrl = import.meta.env.VITE_API_URL;
 
 const apiClient = axios.create({
   headers: {
@@ -23,7 +24,7 @@ export const fetchData = async (requestModel) => {
   // console.log("Encrypted request data:", encryptedRequestData);
 
   try {
-      const response = await apiClient.post("/api/gateway", {
+      const response = await apiClient.post(apiUrl, {
       query: encryptedRequestData,
     });
 
