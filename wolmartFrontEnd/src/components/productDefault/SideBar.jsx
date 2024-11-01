@@ -42,7 +42,7 @@ function SideBar() {
 						</div>
 						{/* End of Widget Icon Box */}
 
-						<div className="widget widget-banner mb-9">
+						{/* <div className="widget widget-banner mb-9">
 							<div className="banner banner-fixed br-sm">
 								<figure>
 									<img
@@ -65,10 +65,10 @@ function SideBar() {
 									</h4>
 								</div>
 							</div>
-						</div>
+						</div> */}
 						{/* End of Widget Banner */}
 
-						<div className="widget widget-products">
+						{/* <div className="widget widget-products">
 							<div className="title-link-wrapper mb-2">
 								<h4 className="title title-link font-weight-bold">
 									More Products
@@ -173,7 +173,7 @@ function SideBar() {
 									></span>
 								</div>
 							</div>
-						</div>
+						</div> */}
 					</div>
 				</div>
 			</aside>

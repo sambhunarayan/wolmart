@@ -162,8 +162,6 @@ function homePage() {
 				<IntroSection />
 				{/* swiper container */}
 				<SwiperContainer  />
-				{/* deal of the day */}
-				<DealOfTheDay />
 				{/* swiper container 2 */}
 				<SwiperContainer2 hotDeals={hotDeals} />
 				{/* notification wrapper */}
@@ -171,7 +169,7 @@ function homePage() {
 				{/* latest products */}
 				<LatestProducts latesProductsList={latestProductsList} />
 				{/* latest products */}
-				<DealOfTheDay productList={dayDeals} />
+				{/* <DealOfTheDay productList={dayDeals} /> */}
 				{/* banner wrapper */}
 				<BannerWrapper />
 				{/* selected products */}

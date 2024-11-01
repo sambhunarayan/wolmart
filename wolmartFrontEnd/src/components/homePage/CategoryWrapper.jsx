@@ -40,8 +40,7 @@ function Category() {
                   <img
                     src={category.image_url}
                     alt="Category"
-                    width="190"
-                    height="190"
+                    style={{width:'71px',height:'71px'}}
                   />
                 </a>
               </figure>

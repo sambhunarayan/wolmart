@@ -12,7 +12,7 @@ console.log("DEC KEY", decKey)
 
 const apiClient = axios.create({
   headers: {
-    Authorization: "d64610ba366bfd18cAFoLnyRm+4M0EKDHSay3q4/rSvK+LR9xeMdQAEdz2WLLYcFG6fPxobKplgOD4MaPB4PE0aHVl3jM/ArdI/j4O0j3tebEKLZqXbtjUebijg8xLa3IQwyXaevgsCZgUroTObiYoxAjS/3FRrYNyC5HUbGhJVpJyoDF9nrHzDcEX5e4ReTW6TVEzaKCbjJBdZer2a5lTIsQjI4z2HiLg0CK5g5ZF1Fxm71Cx1YRXQwgUvB0ltAG67f4nVIo1C9xKzkjTRhYS+QjNxIXYXKY2oSdg==",
+    Authorization: localStorage.getItem("accessToken"),
     "Content-Type": "application/json",
   },
 });
