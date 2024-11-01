@@ -166,6 +166,8 @@ function homePage() {
 				<NotificationWrapper />
 				{/* latest products */}
 				<LatestProducts latesProductsList={latestProductsList} />
+				{/* latest products */}
+				<DealOfTheDay productList={dayDeals} />
 				{/* banner wrapper */}
 				<BannerWrapper />
 				{/* selected products */}

@@ -84,7 +84,7 @@ function ProductDefault() {
 				{/* <!-- Plugin JS File --> */}
 				<script src="/assets/js/parallax.min.js"></script>
 				<script src="/assets/js/jquery.plugin.min.js"></script>
-				<script src="/assets/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+				{/* <script src="/assets/vendor/magnific-popup/jquery.magnific-popup.min.js"></script> */}
 				<script src="/assets/js/swiper-bundle.min.js"></script>
 				<script src="/assets/js/imagesloaded.pkgd.min.js"></script>
 				<script src="/assets/js/skrollr.min.js"></script>
