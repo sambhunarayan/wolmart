@@ -4,6 +4,12 @@ const apiUrl = import.meta.env.VITE_API_URL;
 const encKey = import.meta.env.VITE_ENC_KEY;
 const decKey = import.meta.env.VITE_DEC_KEY;
 
+console.log("ENC KEY", encKey)
+console.log("DEC KEY", decKey)
+
+
+
+
 const apiClient = axios.create({
   headers: {
     Authorization: "d64610ba366bfd18cAFoLnyRm+4M0EKDHSay3q4/rSvK+LR9xeMdQAEdz2WLLYcFG6fPxobKplgOD4MaPB4PE0aHVl3jM/ArdI/j4O0j3tebEKLZqXbtjUebijg8xLa3IQwyXaevgsCZgUroTObiYoxAjS/3FRrYNyC5HUbGhJVpJyoDF9nrHzDcEX5e4ReTW6TVEzaKCbjJBdZer2a5lTIsQjI4z2HiLg0CK5g5ZF1Fxm71Cx1YRXQwgUvB0ltAG67f4nVIo1C9xKzkjTRhYS+QjNxIXYXKY2oSdg==",
@@ -15,7 +21,7 @@ export const fetchData = async (requestModel) => {
 
   const cipher = new Cipher();
   const encryptedRequestData = await cipher.encrypt(
-    requestModel,encKey
+    requestModel, encKey
   );
 
   // Print the headers before the request
@@ -25,7 +31,7 @@ export const fetchData = async (requestModel) => {
   // console.log("Encrypted request data:", encryptedRequestData);
 
   try {
-      const response = await apiClient.post(apiUrl, {
+    const response = await apiClient.post(apiUrl, {
       query: encryptedRequestData,
     });
 
@@ -34,7 +40,7 @@ export const fetchData = async (requestModel) => {
     // console.log("Response data:", response.data);
 
     const decryptedResponse = await cipher.decrypt(
-      response.data,decKey
+      response.data, decKey
     );
 
     return decryptedResponse;
