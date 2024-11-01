@@ -23,7 +23,7 @@ export const fetchData = async (requestModel) => {
   // console.log("Encrypted request data:", encryptedRequestData);
 
   try {
-    const response = await apiClient.post("https://dreamdeal.codesprint.cloud/api/gateway", {
+      const response = await apiClient.post("/api/gateway", {
       query: encryptedRequestData,
     });
 

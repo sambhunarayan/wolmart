@@ -488,7 +488,7 @@ const MainContent = () => {
 									</div>
 									<a
 										href="/cart"
-										type="button" class="btn btn-primary">add to cart</a>
+										type="button" className="btn btn-primary">add to cart</a>
 								</div>
 							</div>
 						</div>
