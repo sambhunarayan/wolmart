@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet';
-import InnerHeader from '../components/InnerHeader';
+import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 function MyAccount() {
@@ -47,7 +47,7 @@ function MyAccount() {
 				{/* Custom Style */}
 				<link rel="stylesheet" href="/assets/css/style.min.css" />
 			</Helmet>
-			<InnerHeader />
+			<Header />
 			<main className="main">
 				<div className="page-header">
 					<div className="container">

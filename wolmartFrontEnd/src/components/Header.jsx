@@ -1,4 +1,11 @@
+import React, { useState } from 'react';
 function header() {
+	// State to track if the div is visible
+	const [isActive, setIsActive] = useState(false);
+	// Toggle function to add/remove the "active" class
+	const toggleClass = () => {
+		setIsActive(!isActive);
+	};
 	return (
 		<>
 			<header className="header">
@@ -93,18 +100,28 @@ function header() {
 								<i className="w-icon-heart"></i>
 								<span className="wishlist-label d-lg-show">Wishlist</span>
 							</a>
-							<div className="dropdown cart-dropdown cart-offcanvas mr-0 mr-lg-2">
+							<div
+								className={`dropdown cart-dropdown cart-offcanvas mr-0 mr-lg-2 ${
+									isActive ? 'opened' : ''
+								}`}
+							>
 								<div className="cart-overlay"></div>
-								<a href="#" className="cart-toggle label-down link">
+								<a
+									href="#"
+									onClick={toggleClass}
+									className="cart-toggle label-down link"
+								>
+									{' '}
 									<i className="w-icon-cart">
 										<span className="cart-count text-white">2</span>
 									</i>
 									<span className="cart-label">Cart</span>
 								</a>
+
 								<div className="dropdown-box">
 									<div className="cart-header">
 										<span>Shopping Cart</span>
-										<a href="#" className="btn-close">
+										<a href="#" onClick={toggleClass} className="btn-close">
 											Close<i className="w-icon-long-arrow-right"></i>
 										</a>
 									</div>

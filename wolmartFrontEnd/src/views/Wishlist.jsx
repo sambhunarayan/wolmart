@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet';
-import InnerHeader from '../components/InnerHeader';
+import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ScrollTop from '../components/ScrollTop';
 function Wishlist() {
@@ -120,7 +120,7 @@ function Wishlist() {
 				{/* Main Script - Replace with CDN if available */}
 				<script src="/assets/js/main.min.js"></script>
 			</Helmet>
-			<InnerHeader />
+			<Header />
 			<main className="main wishlist-page">
 				<div className="page-header">
 					<div className="container">

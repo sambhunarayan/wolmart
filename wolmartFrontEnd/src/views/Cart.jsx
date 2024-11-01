@@ -1,13 +1,8 @@
 import { Helmet } from 'react-helmet';
-import InnerHeader from '../components/InnerHeader';
+import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ScrollTop from '../components/ScrollTop';
 function Cart() {
-
-
-
-
-	
 	return (
 		<>
 			<Helmet>
@@ -41,7 +36,7 @@ function Cart() {
 					rel="preload"
 					href="/assets/fonts/wolmart.ttf?png09e"
 					as="font"
-					type="font/ttf" 
+					type="font/ttf"
 					crossOrigin="anonymous"
 				/>
 				<link
@@ -70,7 +65,7 @@ function Cart() {
 					href="/assets/css/style.min.css"
 				/>
 			</Helmet>
-			<InnerHeader />
+			<Header />
 			<main className="main cart">
 				<nav className="breadcrumb-nav">
 					<div className="container">
