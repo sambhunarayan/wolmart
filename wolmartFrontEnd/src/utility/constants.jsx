@@ -1,5 +1,5 @@
 // :::::::::::::::::::::::::::::::END POINT::::::::::::::::::::::
-const ENDPOINT = "/api/gateway";
+const ENDPOINT = "https://dreamdeal.codesprint.cloud/api/gateway";
 
 // :::::::::::::::::::::::::::::::ENC-DEC KEYS:::::::::::::::::::
 const ENC_KEY = "JzI0Fpt9Qap7tDiK5JyuGsVgE3BbbFH1";

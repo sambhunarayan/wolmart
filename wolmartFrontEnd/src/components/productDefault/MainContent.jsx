@@ -1,9 +1,18 @@
 import React, { useState, useEffect } from "react";
 import { fetchData } from "../../api/api";
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+
+// Import Swiper styles
+import 'swiper/css';
+import "swiper/css/navigation";
+import "swiper/css/zoom";
+
 
 const MainContent = () => {
 
 	const [productDetails, setProductDetails] = useState(null);
+	const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
 	// Fetch Product Details
 	useEffect(() => {
@@ -18,7 +27,7 @@ const MainContent = () => {
 
 			try {
 				const response = await fetchData(requestModel);
-				console.log("Category Response:", response);
+				console.log("product details Response:", response);
 
 				// Set product details from response
 				if (response && response.data) {
@@ -32,6 +41,10 @@ const MainContent = () => {
 		handleFetchProductDetails();
 	}, []);
 
+	 if (!productDetails) {
+		return <p>Loading...</p>;
+	}
+
 	return (
 		<div>
 			{productDetails ? (
@@ -39,293 +52,46 @@ const MainContent = () => {
 					<div className="product product-single row">
 						<div className="col-md-6 mb-4 mb-md-8">
 							<div className="product-gallery product-gallery-sticky">
-								<div
-									className="swiper-container product-single-swiper swiper-theme nav-inner swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events"
-									data-swiper-options="{ 'navigation': { 'nextEl': '.swiper-button-next', 'prevEl': '.swiper-button-prev' } }"
-								>
-									<div
-										className="swiper-wrapper"
-										id="swiper-wrapper-e78fa56191057aa25"
-										aria-live="polite"
-										style={{ transform: 'translate3d(0px, 0px, 0px)' }}
+								<Swiper 
+									className="product-single-swiper swiper-theme nav-inner"
+									navigation 
+									slidesPerView={1}
+									onSlideChange={() => console.log('slide change')}
+									onSwiper={(swiper) => console.log(swiper)}
 									>
-										<div
-											className="swiper-slide swiper-slide-active"
-											role="group"
-											aria-label="1 / 4"
-											style={{ width: '415px' }}
-										>
-											<figure
-												className="product-image"
-												style={{
-													position: 'relative',
-													overflow: 'hidden',
-													cursor: 'pointer',
-												}}
-											>
-												<img
-													src="./src/assets/img/products/1-800x900.jpg"
-													data-zoom-image="./src/assets/img/products/1-800x900.jpg"
-													alt="Electronics Black Wrist Watch"
-													width="800"
-													height="900"
-												/>
-
-												{productDetails.images.map((image, index) => (
-													<img
-														key={index}
-														role="presentation"
-														src={image}
-														alt={productDetails.name}
-														className="zoomImg"
-														style={{
-															position: 'absolute',
-															top: '-252.791px',
-															left: '-312.614px',
-															opacity: 1,
-															width: '880px',
-															height: '990px',
-															border: 'none',
-															maxWidth: 'none',
-															maxHeight: 'none',
-														}}
-													/>
-												))}
-
-											</figure>
-										</div>
-										{/* <div
-											className="swiper-slide swiper-slide-next"
-											role="group"
-											aria-label="2 / 4"
-											style={{ width: '415px' }}
-										>
-											<figure
-												className="product-image"
-												style={{
-													position: 'relative',
-													overflow: 'hidden',
-													cursor: 'pointer',
-												}}
-											>
-												<img
-													src="./src/assets/img/products/2-800x900.jpg"
-													data-zoom-image="./src/assets/img/products/2-800x900.jpg"
-													alt="Electronics Black Wrist Watch"
-													width="488"
-													height="549"
-												/>
-												<img
-													role="presentation"
-													alt="Electronics Black Wrist Watch"
-													src="https://dreamdealecom-html.netlify.app/assets/img/products/2-800x900.jpg"
-													className="zoomImg"
-													style={{
-														position: 'absolute',
-														top: '0px',
-														left: '0px',
-														opacity: 0,
-														width: '880px',
-														height: '990px',
-														border: 'none',
-														maxWidth: 'none',
-														maxHeight: 'none',
-													}}
-												/>
-											</figure>
-										</div> */}
-										{/* <div
-											className="swiper-slide"
-											role="group"
-											aria-label="3 / 4"
-											style={{ width: '415px' }}
-										>
-											<figure
-												className="product-image"
-												style={{
-													position: 'relative',
-													overflow: 'hidden',
-													cursor: 'pointer',
-												}}
-											>
-												<img
-													src="./src/assets/img/products/3-800x900.jpg"
-													data-zoom-image="./src/assets/img/products/3-800x900.jpg"
-													alt="Electronics Black Wrist Watch"
-													width="800"
-													height="900"
-												/>
-												<img
-													role="presentation"
-													alt="Electronics Black Wrist Watch"
-													src=""
-													className="zoomImg"
-													style={{
-														position: 'absolute',
-														top: '0px',
-														left: '0px',
-														opacity: 0,
-														width: '880px',
-														height: '990px',
-														border: 'none',
-														maxWidth: 'none',
-														maxHeight: 'none',
-													}}
-												/>
-											</figure>
-										</div> */}
-										{/* <div
-											className="swiper-slide"
-											role="group"
-											aria-label="4 / 4"
-											style={{ width: '415px' }}
-										>
-											<figure
-												className="product-image"
-												style={{
-													position: 'relative',
-													overflow: 'hidden',
-													cursor: 'pointer',
-												}}
-											>
-												<img
-													src="./src/assets/img/products/4-800x900.jpg"
-													data-zoom-image="./src/assets/img/products/4-800x900.jpg"
-													alt="Electronics Black Wrist Watch"
-													width="800"
-													height="900"
-												/>
-												<img
-													role="presentation"
-													alt="Electronics Black Wrist Watch"
-													src="https://dreamdealecom-html.netlify.app/assets/img/products/4-800x900.jpg"
-													className="zoomImg"
-													style={{
-														position: 'absolute',
-														top: '0px',
-														left: '0px',
-														opacity: 0,
-														width: '880px',
-														height: '990px',
-														border: 'none',
-														maxWidth: 'none',
-														maxHeight: 'none',
-													}}
-												/>
-											</figure>
-										</div> */}
-									</div>
-									<button
-										className="swiper-button-next"
-										tabIndex="0"
-										aria-label="Next slide"
-										aria-controls="swiper-wrapper-e78fa56191057aa25"
-										aria-disabled="false"
-									></button>
-									<button
-										className="swiper-button-prev swiper-button-disabled"
-										disabled
-										tabIndex="-1"
-										aria-label="Previous slide"
-										aria-controls="swiper-wrapper-e78fa56191057aa25"
-										aria-disabled="true"
-									></button>
-									<a href="#" className="product-gallery-btn product-image-full">
-										<i className="w-icon-zoom"></i>
-									</a>
-									<span
-										className="swiper-notification"
-										aria-live="assertive"
-										aria-atomic="true"
-									></span>
-								</div>
-								<div
-									className="product-thumbs-wrap swiper-container swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events swiper-container-free-mode swiper-container-thumbs"
-									data-swiper-options="{ 'navigation': { 'nextEl': '.swiper-button-next', 'prevEl': '.swiper-button-prev' } }"
-								>
-									<div
-										className="product-thumbs swiper-wrapper"
-										id="swiper-wrapper-6b7254c3cc592db6"
-										aria-live="polite"
-										style={{ transform: 'translate3d(0px, 0px, 0px)' }}
+									{productDetails.images.map((image, index) => (
+										<SwiperSlide key={index}>
+										<figure className="product-image">
+											<img
+											src={image}
+											alt={`Product ${productDetails.name} ${index + 1}`}
+											width="800"
+											height="900"
+											/>
+										</figure>
+										</SwiperSlide>
+										))}
+								</Swiper>
+								<div className="product-thumbs-wrap">
+									<Swiper
+										onSwiper={setThumbsSwiper}
+										className="product-thumbs swiper-wrapper row cols-4 gutter-sm"
+										slidesPerView={4}
+										spaceBetween={10}
+										freeMode
+										watchSlidesProgress
 									>
-										{/* <div
-											className="product-thumb swiper-slide swiper-slide-thumb-active swiper-slide-visible swiper-slide-active"
-											role="group"
-											aria-label="1 / 4"
-											style={{ width: '96.25px', marginRight: '10px' }}
-										>
+										{productDetails.images.map((image, index) => (
+										<SwiperSlide key={index} className="product-thumb">
 											<img
-												src="./src/assets/img/products/1-800x900.jpg"
-												alt="Product Thumb"
-												width="800"
-												height="900"
+											src={image}
+											alt={`Thumbnail ${productDetails.name} ${index + 1}`}
+											width="100"
+											height="112"
 											/>
-										</div> */}
-										{/* <div
-											className="product-thumb swiper-slide swiper-slide-visible swiper-slide-next"
-											role="group"
-											aria-label="2 / 4"
-											style={{ width: '96.25px', marginRight: '10px' }}
-										>
-											<img
-												src="./src/assets/img/products/2-800x900.jpg"
-												alt="Product Thumb"
-												width="800"
-												height="900"
-											/>
-										</div> */}
-										{/* <div
-											className="product-thumb swiper-slide swiper-slide-visible"
-											role="group"
-											aria-label="3 / 4"
-											style={{ width: '96.25px', marginRight: '10px' }}
-										>
-											<img
-												src="./src/assets/img/products/3-800x900.jpg"
-												alt="Product Thumb"
-												width="800"
-												height="900"
-											/>
-										</div> */}
-										<div
-											className="product-thumb swiper-slide swiper-slide-visible"
-											role="group"
-											aria-label="4 / 4"
-											style={{ width: '96.25px', marginRight: '10px' }}
-										>
-											{productDetails.images.map((image, index) => (
-												<img
-													key={index}
-													src={image}
-													alt={productDetails.name}
-													width="800"
-													height="900"
-												/>
-											))}
-										</div>
-									</div>
-									<button
-										className="swiper-button-next swiper-button-disabled"
-										disabled
-										tabIndex="-1"
-										aria-label="Next slide"
-										aria-controls="swiper-wrapper-6b7254c3cc592db6"
-										aria-disabled="true"
-									></button>
-									<button
-										className="swiper-button-prev swiper-button-disabled"
-										disabled
-										tabIndex="-1"
-										aria-label="Previous slide"
-										aria-controls="swiper-wrapper-6b7254c3cc592db6"
-										aria-disabled="true"
-									></button>
-									<span
-										className="swiper-notification"
-										aria-live="assertive"
-										aria-atomic="true"
-									></span>
+										</SwiperSlide>
+										))}
+									</Swiper>
 								</div>
 							</div>
 						</div>
@@ -348,7 +114,7 @@ const MainContent = () => {
 										<div className="product-categories">
 											Category:{' '}
 											<span className="product-category">
-												<a href="#">Electronics</a>
+												<a href="#">{productDetails.category.name}</a>
 											</span>
 										</div>
 										<div className="product-sku">
@@ -375,7 +141,6 @@ const MainContent = () => {
 										({productDetails.review_count})
 									</a>
 								</div>
-
 								<div className="product-short-desc">
 									<ul className="list-type-check list-style-none">
 										<li>Ultrices eros in cursus turpis massa cursus mattis.</li>
@@ -384,70 +149,56 @@ const MainContent = () => {
 									</ul>
 								</div>
 
-								<hr className="product-divider" />
-								{productDetails.variants_mapping && productDetails.variants_mapping.length > 0 && (
+								<hr className="product-divider" /> 
+								
+								{productDetails.variants_mapping && productDetails.variants_mapping.length > 0 ? (
+								<div>
+									{productDetails.variants_mapping.map((variant, index) => (
+									<div key={index} className={`product-form product-variation-form product-${variant.attribute.toLowerCase()}-swatch`}>
+										{/* Display attribute label */}
+										<label className="mb-1">{variant.attribute}:</label>
 
-									<div className="product-form product-variation-form product-color-swatch">
-										<label>Color:</label>
-
+										{/* Check if the attribute is "Size" */}
+										{variant.attribute === "Size" ? (
+										<div className="flex-wrap d-flex align-items-center product-variations">
+											{variant.attribute_values.map((value) => (
+											<a key={value._id} href="#" className="size">
+												{value.value}
+											</a>
+											))}
+										</div>
+										) : variant.attribute === "Colour" ? (
+										// If the attribute is "Colour", render color swatches
 										<div className="d-flex align-items-center product-variations">
+											{variant.attribute_values.map((value) => (
 											<a
+												key={value._id}
 												href="#"
 												className="color"
-												style={{ backgroundColor: '#ffcc01' }}
+												style={{ backgroundColor: value.value.toLowerCase() }}
 											></a>
-											<a
-												href="#"
-												className="color"
-												style={{ backgroundColor: '#ca6d00' }}
-											></a>
-											<a
-												href="#"
-												className="color"
-												style={{ backgroundColor: '#1c93cb' }}
-											></a>
-											<a
-												href="#"
-												className="color"
-												style={{ backgroundColor: '#ccc' }}
-											></a>
-											<a
-												href="#"
-												className="color"
-												style={{ backgroundColor: '#333' }}
-											></a>
-										</div>								</div>
-
-								)}
-
-								<div className="product-form product-variation-form product-size-swatch">
-									<label className="mb-1">Size:</label>
-									<div className="flex-wrap d-flex align-items-center product-variations">
-										<a href="#" className="size">
-											Small
-										</a>
-										<a href="#" className="size">
-											Medium
-										</a>
-										<a href="#" className="size">
-											Large
-										</a>
-										<a href="#" className="size">
-											Extra Large
+											))}
+										</div>
+										) : null}
+										
+										{/* Clear all option */}
+										<a href="#" className="product-variation-clean" style={{ display: 'none' }}>
+										Clean All
 										</a>
 									</div>
-									<a
-										href="#"
-										className="product-variation-clean"
-										style={{ display: 'none' }}
-									>
-										Clean All
-									</a>
+									))}
+									<div className="product-variation-price">
+										<span className="rupee">₹</span>{productDetails.sale_price}
+									</div>
 								</div>
+								):(
+									<div className="product-variation-price" style={{ display: 'block' }}>
+										<span className="rupee">₹</span>{productDetails.sale_price}
+									</div>
+								)}
 
-								<div className="product-variation-price">
-									<span></span>
-								</div>
+
+								
 
 								<div className="social-links-wrapper">
 									<div className="social-links">
@@ -504,11 +255,7 @@ const MainContent = () => {
 							</li>
 							<li className="nav-item">
 								<a href="#product-tab-specification" className="nav-link">
-									{productDetails.product_specifications.map((spec, index) => (
-										<li key={index}>
-											{spec.specification_name}: {spec.specification_value}
-										</li>
-									))}
+									Specifications
 								</a>
 							</li>
 							<li className="nav-item">
@@ -581,22 +328,12 @@ const MainContent = () => {
 
 							<div className="tab-pane" id="product-tab-specification">
 								<ul className="list-none">
-									<li>
-										<label>Model</label>
-										<p>Skysuite 320</p>
-									</li>
-									<li>
-										<label>Color</label>
-										<p>Black</p>
-									</li>
-									<li>
-										<label>Size</label>
-										<p>Large, Small</p>
-									</li>
-									<li>
-										<label>Guarantee Time</label>
-										<p>3 Months</p>
-									</li>
+									{productDetails.product_specifications.map((spec, index) => (
+										<li key={index}>
+											<label>{spec.specification_name}</label>
+											<p>{spec.specification_value}</p>
+										</li>
+									))}
 								</ul>
 							</div>
 							<div className="tab-pane" id="product-tab-reviews">
@@ -1238,45 +975,3 @@ const MainContent = () => {
 };
 
 export default MainContent;
-
-
-
-
-
-
-
-
-{/* <div>
-<h1>{productDetails.name}</h1>
-<p>Description: {productDetails.description}</p>
-<p>Base Price: {productDetails.base_price}</p>
-<p>Sale Price: {productDetails.sale_price}</p>
-<p>SKU: {productDetails.sku}</p>
-<p>Category: {productDetails.category.name}</p>
-<p>Sub-category: {productDetails.sub_category.name}</p>
-<p>Rating: {productDetails.rating}</p>
-<p>Reviews: {productDetails.review_count}</p>
-
-<h3>Specifications</h3>
-<ul>
-	{productDetails.product_specifications.map((spec, index) => (
-		<li key={index}>
-			{spec.specification_name}: {spec.specification_value}
-		</li>
-	))}
-</ul>
-
-<h3>Keywords</h3>
-<ul>
-	{productDetails.keywords.map((keyword, index) => (
-		<li key={index}>{keyword}</li>
-	))}
-</ul>
-
-<h3>Images</h3>
-<div>
-	{productDetails.images.map((image, index) => (
-		<img key={index} src={image} alt={productDetails.name} width="200" />
-	))}
-</div>
-</div> */}
