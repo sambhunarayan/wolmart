@@ -169,7 +169,7 @@ function homePage() {
 				{/* banner wrapper */}
 				<BannerWrapper />
 				{/* selected products */}
-				<RecentlyViewed />
+				<RecentlyViewed mostPopularDeals={mostPopularDeals} />
 				{/* link banner */}
 				<LinkBanner />
 				{/* our clients */}

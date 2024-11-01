@@ -1,4 +1,4 @@
-function RecentlyViewed() {
+function RecentlyViewed({ mostPopularDeals }) {
 	return (
 		<>
 			<div className="container mb-4">
@@ -23,20 +23,21 @@ function RecentlyViewed() {
 						className="swiper-wrapper"
 						style={{ transform: 'translate3d(0px, 0px, 0px)' }}
 					>
-						<div
+
+						{mostPopularDeals.map((recentlyViewed, index) => <div
 							className="swiper-slide product product-image-gap product-simple"
 							style={{ width: '216px', marginRight: '20px' }}
 						>
 							<figure className="product-media">
 								<a href="product-default.html">
 									<img
-										src="./src/assets/img/products/1-1-1.jpg"
+										src={recentlyViewed.images[0]}
 										alt="Product"
 										width="295"
 										height="335"
 									/>
 									<img
-										src="./src/assets/img/products/1-1-2.jpg"
+										src={recentlyViewed.images[1]}
 										alt="Product"
 										width="295"
 										height="335"
@@ -59,7 +60,7 @@ function RecentlyViewed() {
 									title="Add to wishlist"
 								></a>
 								<h4 className="product-name">
-									<a href="product-default.html">Gold Watch</a>
+									<a href="product-default.html">{recentlyViewed.name}</a>
 								</h4>
 								<div className="ratings-container">
 									<div className="ratings-full">
@@ -71,8 +72,8 @@ function RecentlyViewed() {
 								</div>
 								<div className="product-pa-wrapper">
 									<div className="product-price">
-										<ins className="new-price">$20.83</ins>
-										<del className="old-price">$27.07</del>
+										<ins className="new-price">${recentlyViewed.base_price}</ins>
+										<del className="old-price">${recentlyViewed.sale_price}</del>
 									</div>
 									<div className="product-action">
 										<a
@@ -84,8 +85,9 @@ function RecentlyViewed() {
 									</div>
 								</div>
 							</div>
-						</div>
-						<div
+						</div>)}
+
+						{/* <div
 							className="swiper-slide product product-image-gap product-simple swiper-slide-next"
 							role="group"
 							aria-label="2 / 5"
@@ -433,7 +435,7 @@ function RecentlyViewed() {
 									</div>
 								</div>
 							</div>
-						</div>
+						</div> */}
 
 						{/* Additional Swiper slides can be added similarly */}
 

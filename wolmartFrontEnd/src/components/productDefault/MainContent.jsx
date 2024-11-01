@@ -288,15 +288,12 @@ const MainContent = () => {
 												height="900"
 											/>
 										</div> */}
-
-
 										<div
 											className="product-thumb swiper-slide swiper-slide-visible"
 											role="group"
 											aria-label="4 / 4"
 											style={{ width: '96.25px', marginRight: '10px' }}
 										>
-
 											{productDetails.images.map((image, index) => (
 												<img
 													key={index}
@@ -487,8 +484,13 @@ const MainContent = () => {
 										</a>
 									</div>
 									<a
+										// href="/cart"
+										onClick={()=>alert("Item Added to Cart")}
+										type="button" class="btn btn-primary">Add to Cart</a>
+									<a
 										href="/cart"
-										type="button" class="btn btn-primary">add to cart</a>
+										onClick={localStorage.setItem("cart_prodId", productDetails._id)}
+										type="button" color="red" class="btn btn-primary">Buy Now</a>
 								</div>
 							</div>
 						</div>
