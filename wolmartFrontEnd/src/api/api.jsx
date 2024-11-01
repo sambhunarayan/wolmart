@@ -1,6 +1,9 @@
 import axios from "axios";
 import Cipher from "../utility/cipher";
 const apiUrl = import.meta.env.VITE_API_URL;
+const encKey = import.meta.env.VITE_ENC_KEY;
+const decKey = import.meta.env.VITE_DEC_KEY;
+console.log(encKey)
 
 const apiClient = axios.create({
   headers: {
@@ -13,8 +16,7 @@ export const fetchData = async (requestModel) => {
 
   const cipher = new Cipher();
   const encryptedRequestData = await cipher.encrypt(
-    requestModel,
-    "JzI0Fpt9Qap7tDiK5JyuGsVgE3BbbFH1"
+    requestModel,encKey
   );
 
   // Print the headers before the request
@@ -33,8 +35,7 @@ export const fetchData = async (requestModel) => {
     // console.log("Response data:", response.data);
 
     const decryptedResponse = await cipher.decrypt(
-      response.data,
-      "omdbKQg9jCZxeX4O1muy330nWDFpuWjL"
+      response.data,decKey
     );
 
     return decryptedResponse;
