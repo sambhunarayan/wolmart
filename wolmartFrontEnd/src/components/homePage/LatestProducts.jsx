@@ -123,12 +123,20 @@ function LatesProducts({ latesProductsList }) {
                           )}
                         </figure>
                         <div className="product-details">
-                          <h4 className="product-name">
-                            <a href="/product-default">{product.name}</a>
-                          </h4>
-                          <div className="product-pa-wrapper">
-                            <div className="product-price">
-                              {product.sale_price ? (
+                            <a href={'/productDefault'} onClick={localStorage.setItem("product_Id", product._id)} className="btn-wishlist w-icon-heart" title="Add to wishlist"></a>
+                            <h4 className="product-name">
+                                <a href={'/productDefault'} onClick={localStorage.setItem("product_Id", product._id)}>{product.name}</a>
+                            </h4>
+                            <div className="ratings-container">
+                                <div className="ratings-full">
+                                    <span className="ratings" style={{width: '0%'}}></span>
+                                    <span className="tooltiptext tooltip-top">0</span>
+                                </div>
+                                <a className="rating-reviews" href={'/productDefault'} onClick={localStorage.setItem("product_Id", product._id)}>(0 reviews)</a>
+                            </div>
+                            <div className="product-pa-wrapper">
+                                <div className="product-price">
+                                    {product.sale_price ? (
                                 <>
                                   <ins className="new-price">₹{product.sale_price}</ins>
                                   <del className="old-price">₹{product.base_price}</del>
@@ -136,13 +144,12 @@ function LatesProducts({ latesProductsList }) {
                               ) : (
                                 <ins className="new-price">₹{product.base_price}</ins>
                               )}
+                                </div>
+                                <div className="product-action">
+                                    <a href="#" className="btn-cart btn-product btn btn-link btn-underline">Add To
+                                        Cart</a>
+                                </div>
                             </div>
-                            <div className="product-action">
-                              <a href="/cart" className="btn-cart btn-product btn btn-link btn-underline">
-                                Add To Cart
-                              </a>
-                            </div>
-                          </div>
                         </div>
                       </div>
                     ))}
