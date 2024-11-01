@@ -32,7 +32,7 @@ function NotificationWrapper() {
 						>
 							<figure className="br-sm">
 								<img
-									src="./src/assets/img/1-1.jpg"
+									src="/assets/img/1-1.jpg"
 									alt="Category Banner"
 									width="400"
 									height="200"
@@ -62,7 +62,7 @@ function NotificationWrapper() {
 						>
 							<figure className="br-sm">
 								<img
-									src="./src/assets/img/1-2.jpg"
+									src="/assets/img/1-2.jpg"
 									alt="Category Banner"
 									width="400"
 									height="200"
@@ -92,7 +92,7 @@ function NotificationWrapper() {
 						>
 							<figure className="br-sm">
 								<img
-									src="./src/assets/img/1-3.jpg"
+									src="/assets/img/1-3.jpg"
 									alt="Category Banner"
 									width="400"
 									height="200"

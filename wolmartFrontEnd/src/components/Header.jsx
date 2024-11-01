@@ -27,7 +27,7 @@ function header() {
 							<a href="#" className="mobile-menu-toggle w-icon-hamburger"></a>
 							<a href="index.html" className="logo">
 								<img
-									src="./src/assets/img/logo.png"
+									src="/assets/img/logo.png"
 									alt="logo"
 									width="205"
 									height="45"

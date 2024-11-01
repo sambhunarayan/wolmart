@@ -96,13 +96,13 @@ function RecentlyViewed({ mostPopularDeals }) {
 							<figure className="product-media">
 								<a href="product-default.html">
 									<img
-										src="./src/assets/img/products/1-2-1.jpg"
+										src="/assets/img/products/1-2-1.jpg"
 										alt="Product"
 										width="295"
 										height="335"
 									/>
 									<img
-										src="./src/assets/img/products/1-2-2.jpg"
+										src="/assets/img/products/1-2-2.jpg"
 										alt="Product"
 										width="295"
 										height="335"
@@ -161,13 +161,13 @@ function RecentlyViewed({ mostPopularDeals }) {
 							<figure className="product-media">
 								<a href="product-default.html">
 									<img
-										src="./src/assets/img/products/1-3-1.jpg"
+										src="/assets/img/products/1-3-1.jpg"
 										alt="Product"
 										width="295"
 										height="335"
 									/>
 									<img
-										src="./src/assets/img/products/1-3-2.jpg"
+										src="/assets/img/products/1-3-2.jpg"
 										alt="Product"
 										width="295"
 										height="335"
@@ -225,13 +225,13 @@ function RecentlyViewed({ mostPopularDeals }) {
 							<figure className="product-media">
 								<a href="product-default.html">
 									<img
-										src="./src/assets/img/products/1-4-1.jpg"
+										src="/assets/img/products/1-4-1.jpg"
 										alt="Product"
 										width="295"
 										height="335"
 									/>
 									<img
-										src="./src/assets/img/products/1-4-2.jpg"
+										src="/assets/img/products/1-4-2.jpg"
 										alt="Product"
 										width="295"
 										height="335"
@@ -317,13 +317,13 @@ function RecentlyViewed({ mostPopularDeals }) {
 							<figure className="product-media">
 								<a href="product-default.html">
 									<img
-										src="./src/assets/img/products/1-5-1.jpg"
+										src="/assets/img/products/1-5-1.jpg"
 										alt="Product"
 										width="295"
 										height="335"
 									/>
 									<img
-										src="./src/assets/img/products/1-5-2.jpg"
+										src="/assets/img/products/1-5-2.jpg"
 										alt="Product"
 										width="295"
 										height="335"
@@ -381,13 +381,13 @@ function RecentlyViewed({ mostPopularDeals }) {
 							<figure className="product-media">
 								<a href="product-default.html">
 									<img
-										src="./src/assets/img/products/1-5-1.jpg"
+										src="/assets/img/products/1-5-1.jpg"
 										alt="Product"
 										width="295"
 										height="335"
 									/>
 									<img
-										src="./src/assets/img/products/1-5-2.jpg"
+										src="/assets/img/products/1-5-2.jpg"
 										alt="Product"
 										width="295"
 										height="335"

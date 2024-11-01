@@ -5,14 +5,14 @@ function LinkBanner() {
 				<div
 					className="banner link-banner-newsletter d-flex mb-8 align-items-center row gutter-no br-sm appear-animate fadeIn appear-animation-visible"
 					style={{
-						backgroundImage: `url("./src/assets/img/banner-6.jpg")`,
+						backgroundImage: `url("/assets/img/banner-6.jpg")`,
 						backgroundColor: 'rgb(39, 57, 61)',
 						animationDuration: '1.2s',
 					}}
 				>
 					<div className="col-xl-5 col-lg-4 mr-auto">
 						<figure className="banner-media d-lg-show">
-							<img src="./src/assets/img/image-2.png" alt="Banner-image" />
+							<img src="/assets/img/image-2.png" alt="Banner-image" />
 						</figure>
 					</div>
 					<div className="banner-content col-xl-5 col-lg-6 col-sm-8 mb-4">
@@ -47,7 +47,7 @@ function LinkBanner() {
 					<div className="col-lg-2 col-sm-4 newsletter-button">
 						<a href="#">
 							<img
-								src="./src/assets/img/button-1.jpg"
+								src="/assets/img/button-1.jpg"
 								className="mb-4"
 								alt="Button"
 								width="141"
@@ -57,7 +57,7 @@ function LinkBanner() {
 						</a>
 						<a href="#">
 							<img
-								src="./src/assets/img/button-2.jpg"
+								src="/assets/img/button-2.jpg"
 								alt="Button"
 								width="141"
 								height="41"
