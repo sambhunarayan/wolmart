@@ -12,8 +12,6 @@ function LatesProducts({ latesProductsList }) {
     const chunkIndex = i % 5; // This will cycle through 0 to 4
     chunkedProducts[chunkIndex].push(latesProductsList[i]);
   }
-  console.log(chunkedProducts)
-  console.log('dddddddddddddddddd')
 
   return (
     <>
