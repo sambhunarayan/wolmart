@@ -1,10 +1,34 @@
-import './App.css';
+import React, { useState, useEffect } from 'react';
 function ScrollTop() {
+	const [scrolled, setScrolled] = useState(false);
+	const [dashArray, setDashArray] = useState(16.4198); // Initial value for strokeDasharray
+
+	useEffect(() => {
+		// Define the scroll handler
+		const handleScroll = () => {
+			if (window.scrollY > 100) {
+				const newDashArray = Math.min(16.4198 + window.scrollY / 10, 400);
+				setDashArray(newDashArray);
+				// Add threshold as per your requirement
+				setScrolled(true);
+			} else {
+				setScrolled(false);
+			}
+		};
+
+		// Attach the scroll event listener
+		window.addEventListener('scroll', handleScroll);
+
+		// Clean up the event listener on component unmount
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+		};
+	}, []);
 	return (
 		<>
 			<a
 				id="scroll-top"
-				className="scroll-top"
+				className={`scroll-top ${scrolled ? 'show' : ''}`}
 				href="#top"
 				title="Top"
 				role="button"
@@ -23,7 +47,7 @@ function ScrollTop() {
 						cx="35"
 						cy="35"
 						r="34"
-						style={{ strokeDasharray: '16.4198, 400' }}
+						style={{ strokeDasharray: `${dashArray}, 400` }}
 					></circle>
 				</svg>
 			</a>

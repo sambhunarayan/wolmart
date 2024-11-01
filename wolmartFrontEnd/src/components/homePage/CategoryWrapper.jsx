@@ -36,11 +36,11 @@ function Category() {
 					{categories.map(category => (
 						<div key={category.id} className="category category-ellipse">
 							<figure className="category-media">
-								<a href="shop.html">
+								<a href="shop.html" data-previewlistener="true">
 									<img
 										src={category.image_url}
 										alt="Category"
-										style={{ width: '190', height: '190' }}
+										style={{ width: '78px', height: '78px' }}
 									/>
 								</a>
 							</figure>
