@@ -53,7 +53,7 @@ function OurClients() {
 						>
 							<figure>
 								<img
-									src="./src/assets/img/brands/1.png"
+									src="/assets/img/brands/1.png"
 									alt="Brand"
 									width="290"
 									height="100"
@@ -69,7 +69,7 @@ function OurClients() {
 						>
 							<figure>
 								<img
-									src="./src/assets/img/brands/2.png"
+									src="/assets/img/brands/2.png"
 									alt="Brand"
 									width="290"
 									height="100"
@@ -85,7 +85,7 @@ function OurClients() {
 						>
 							<figure>
 								<img
-									src="./src/assets/img/brands/3.png"
+									src="/assets/img/brands/3.png"
 									alt="Brand"
 									width="290"
 									height="100"
@@ -101,7 +101,7 @@ function OurClients() {
 						>
 							<figure>
 								<img
-									src="./src/assets/img/brands/4.png"
+									src="/assets/img/brands/4.png"
 									alt="Brand"
 									width="290"
 									height="100"
@@ -117,7 +117,7 @@ function OurClients() {
 						>
 							<figure>
 								<img
-									src="./src/assets/img/brands/5.png"
+									src="/assets/img/brands/5.png"
 									alt="Brand"
 									width="290"
 									height="100"
@@ -133,7 +133,7 @@ function OurClients() {
 						>
 							<figure>
 								<img
-									src="./src/assets/img/brands/6.png"
+									src="/assets/img/brands/6.png"
 									alt="Brand"
 									width="290"
 									height="100"
@@ -149,7 +149,7 @@ function OurClients() {
 						>
 							<figure>
 								<img
-									src="./src/assets/img/brands/7.png"
+									src="/assets/img/brands/7.png"
 									alt="Brand"
 									width="290"
 									height="100"
@@ -165,7 +165,7 @@ function OurClients() {
 						>
 							<figure>
 								<img
-									src="./src/assets/img/brands/8.png"
+									src="/assets/img/brands/8.png"
 									alt="Brand"
 									width="290"
 									height="100"
@@ -181,7 +181,7 @@ function OurClients() {
 						>
 							<figure>
 								<img
-									src="./src/assets/img/brands/1.png"
+									src="/assets/img/brands/1.png"
 									alt="Brand"
 									width="290"
 									height="100"
@@ -197,7 +197,7 @@ function OurClients() {
 						>
 							<figure>
 								<img
-									src="./src/assets/img/brands/2.png"
+									src="/assets/img/brands/2.png"
 									alt="Brand"
 									width="290"
 									height="100"
@@ -213,7 +213,7 @@ function OurClients() {
 						>
 							<figure>
 								<img
-									src="./src/assets/img/brands/3.png"
+									src="/assets/img/brands/3.png"
 									alt="Brand"
 									width="290"
 									height="100"
@@ -229,7 +229,7 @@ function OurClients() {
 						>
 							<figure>
 								<img
-									src="./src/assets/img/brands/4.png"
+									src="/assets/img/brands/4.png"
 									alt="Brand"
 									width="290"
 									height="100"
@@ -245,7 +245,7 @@ function OurClients() {
 						>
 							<figure>
 								<img
-									src="./src/assets/img/brands/5.png"
+									src="/assets/img/brands/5.png"
 									alt="Brand"
 									width="290"
 									height="100"
@@ -261,7 +261,7 @@ function OurClients() {
 						>
 							<figure>
 								<img
-									src="./src/assets/img/brands/6.png"
+									src="/assets/img/brands/6.png"
 									alt="Brand"
 									width="290"
 									height="100"
@@ -277,7 +277,7 @@ function OurClients() {
 						>
 							<figure>
 								<img
-									src="./src/assets/img/brands/7.png"
+									src="/assets/img/brands/7.png"
 									alt="Brand"
 									width="290"
 									height="100"
@@ -293,7 +293,7 @@ function OurClients() {
 						>
 							<figure>
 								<img
-									src="./src/assets/img/brands/8.png"
+									src="/assets/img/brands/8.png"
 									alt="Brand"
 									width="290"
 									height="100"
@@ -309,7 +309,7 @@ function OurClients() {
 						>
 							<figure>
 								<img
-									src="./src/assets/img/brands/1.png"
+									src="/assets/img/brands/1.png"
 									alt="Brand"
 									width="290"
 									height="100"
@@ -325,7 +325,7 @@ function OurClients() {
 						>
 							<figure>
 								<img
-									src="./src/assets/img/brands/2.png"
+									src="/assets/img/brands/2.png"
 									alt="Brand"
 									width="290"
 									height="100"
@@ -341,7 +341,7 @@ function OurClients() {
 						>
 							<figure>
 								<img
-									src="./src/assets/img/brands/3.png"
+									src="/assets/img/brands/3.png"
 									alt="Brand"
 									width="290"
 									height="100"
@@ -357,7 +357,7 @@ function OurClients() {
 						>
 							<figure>
 								<img
-									src="./src/assets/img/brands/4.png"
+									src="/assets/img/brands/4.png"
 									alt="Brand"
 									width="290"
 									height="100"
@@ -373,7 +373,7 @@ function OurClients() {
 						>
 							<figure>
 								<img
-									src="./src/assets/img/brands/5.png"
+									src="/assets/img/brands/5.png"
 									alt="Brand"
 									width="290"
 									height="100"
@@ -389,7 +389,7 @@ function OurClients() {
 						>
 							<figure>
 								<img
-									src="./src/assets/img/brands/6.png"
+									src="/assets/img/brands/6.png"
 									alt="Brand"
 									width="290"
 									height="100"
@@ -405,7 +405,7 @@ function OurClients() {
 						>
 							<figure>
 								<img
-									src="./src/assets/img/brands/7.png"
+									src="/assets/img/brands/7.png"
 									alt="Brand"
 									width="290"
 									height="100"
@@ -421,7 +421,7 @@ function OurClients() {
 						>
 							<figure>
 								<img
-									src="./src/assets/img/brands/8.png"
+									src="/assets/img/brands/8.png"
 									alt="Brand"
 									width="290"
 									height="100"
