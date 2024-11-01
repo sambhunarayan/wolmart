@@ -35,13 +35,13 @@ function DealOfTheDay() {
 								<figure className="product-media">
 									<a href="product-default.html">
 										<img
-											src="./src/assets/img/products/1-1-1.jpg"
+											src="/assets/img/products/1-1-1.jpg"
 											alt="Product"
 											width="315"
 											height="355"
 										/>
 										<img
-											src="./src/assets/img/products/1-1-2.jpg"
+											src="/assets/img/products/1-1-2.jpg"
 											alt="Product"
 											width="315"
 											height="355"
@@ -134,13 +134,13 @@ function DealOfTheDay() {
 								<figure className="product-media">
 									<a href="product-default.html">
 										<img
-											src="./src/assets/img/products/1-4-1.jpg"
+											src="/assets/img/products/1-4-1.jpg"
 											alt="Product"
 											width="315"
 											height="355"
 										/>
 										<img
-											src="./src/assets/img/products/1-4-2.jpg"
+											src="/assets/img/products/1-4-2.jpg"
 											alt="Product"
 											width="315"
 											height="355"

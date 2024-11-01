@@ -9,7 +9,7 @@ function BannerWrapper() {
 					<div className="banner banner-fixed overlay-dark br-sm mt-4">
 						<figure className="br-sm">
 							<img
-								src="./src/assets/img/banner-3.jpg"
+								src="/assets/img/banner-3.jpg"
 								alt="Category Banner"
 								width="680"
 								height="180"
@@ -39,7 +39,7 @@ function BannerWrapper() {
 					<div className="banner banner-fixed overlay-dark br-sm mt-4">
 						<figure className="br-sm">
 							<img
-								src="./src/assets/img/banner-4.jpg"
+								src="/assets/img/banner-4.jpg"
 								alt="Category Banner"
 								width="680"
 								height="180"

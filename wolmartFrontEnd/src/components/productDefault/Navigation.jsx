@@ -18,7 +18,7 @@ function Navigation() {
 						</a>
 						<span className="product-nav-popup">
 							<img
-								src="./src/assets/img/product-nav-prev.jpg"
+								src="/assets/img/product-nav-prev.jpg"
 								alt="Product"
 								width="110"
 								height="110"
@@ -32,7 +32,7 @@ function Navigation() {
 						</a>
 						<span className="product-nav-popup">
 							<img
-								src="./src/assets/img/product-nav-next.jpg"
+								src="/assets/img/product-nav-next.jpg"
 								alt="Product"
 								width="110"
 								height="110"

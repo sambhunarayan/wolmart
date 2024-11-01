@@ -104,7 +104,7 @@ const MainContent = () => {
 								<div className="product-bm-wrapper">
 									<figure className="brand">
 										<img
-											src="./src/assets/img/brands/brand-2.jpg"
+											src="/assets/img/brands/brand-2.jpg"
 											alt="Brand"
 											width="105"
 											height="48"
