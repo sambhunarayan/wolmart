@@ -51,7 +51,11 @@ function homePage() {
 		handleFetchDeals();
 	}, []);
 
-	// Log the updated state
+
+	useEffect(() => {
+		console.log('HotDeals updated:', hotDeals);
+	}, [hotDeals]);
+
 	useEffect(() => {
 		console.log('latest Product updated:', latestProductsList);
 	}, [latestProductsList]);
@@ -157,11 +161,11 @@ function homePage() {
 				{/* intro section */}
 				<IntroSection />
 				{/* swiper container */}
-				<SwiperContainer />
+				<SwiperContainer  />
 				{/* deal of the day */}
 				<DealOfTheDay />
 				{/* swiper container 2 */}
-				<SwiperContainer2 />
+				<SwiperContainer2 hotDeals={hotDeals} />
 				{/* notification wrapper */}
 				<NotificationWrapper />
 				{/* latest products */}
@@ -171,7 +175,7 @@ function homePage() {
 				{/* banner wrapper */}
 				<BannerWrapper />
 				{/* selected products */}
-				<RecentlyViewed />
+				<RecentlyViewed mostPopularDeals={mostPopularDeals} />
 				{/* link banner */}
 				<LinkBanner />
 				{/* our clients */}

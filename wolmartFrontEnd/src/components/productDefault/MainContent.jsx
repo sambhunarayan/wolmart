@@ -235,8 +235,13 @@ const MainContent = () => {
 										</a>
 									</div>
 									<a
+										// href="/cart"
+										onClick={()=>alert("Item Added to Cart")}
+										type="button" class="btn btn-primary">Add to Cart</a>
+									<a
 										href="/cart"
-										type="button" className="btn btn-primary">add to cart</a>
+										onClick={localStorage.setItem("cart_prodId", productDetails._id)}
+										type="button" color="red" class="btn btn-primary">Buy Now</a>
 								</div>
 							</div>
 						</div>
