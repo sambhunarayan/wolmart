@@ -21,7 +21,7 @@ const MainContent = () => {
 				"service": "products",
 				"action": "getProductDetails",
 				"input": {
-					"product_id": localStorage.getItem("product_Id")
+					"product_id": localStorage.getItem("product_id")
 				}
 			};
 
@@ -41,10 +41,37 @@ const MainContent = () => {
 		handleFetchProductDetails();
 	}, []);
 
-	 if (!productDetails) {
+
+	const addToCart = async () => {
+		localStorage.setItem("cart_prodId", productDetails._id);
+		console.log(localStorage.getItem("cart_prodId"));
+		const requestModel =
+		{
+			"service": "cart",
+			"action": "addToCart",
+			"input": {
+				"product_id": localStorage.getItem("cart_prodId"),
+				"product_variant_id": "67208d325554671c2e066aec",
+				"quantity": 1
+			}
+		}
+
+		try {
+			const response = await fetchData(requestModel);
+			console.log("product details Response:", response);
+
+			// Set product details from response
+			if (response && response.data) {
+				setProductDetails(response.data);
+			}
+		} catch (error) {
+			console.error("Error fetching ProductDetails:", error);
+		}
+	};
+
+	if (!productDetails) {
 		return <p>Loading...</p>;
 	}
-
 	return (
 		<div>
 			{productDetails ? (
@@ -52,25 +79,25 @@ const MainContent = () => {
 					<div className="product product-single row">
 						<div className="col-md-6 mb-4 mb-md-8">
 							<div className="product-gallery product-gallery-sticky">
-								<Swiper 
+								<Swiper
 									className="product-single-swiper swiper-theme nav-inner"
-									navigation 
+									navigation
 									slidesPerView={1}
 									onSlideChange={() => console.log('slide change')}
 									onSwiper={(swiper) => console.log(swiper)}
-									>
+								>
 									{productDetails.images.map((image, index) => (
 										<SwiperSlide key={index}>
-										<figure className="product-image">
-											<img
-											src={image}
-											alt={`Product ${productDetails.name} ${index + 1}`}
-											width="800"
-											height="900"
-											/>
-										</figure>
+											<figure className="product-image">
+												<img
+													src={image}
+													alt={`Product ${productDetails.name} ${index + 1}`}
+													width="800"
+													height="900"
+												/>
+											</figure>
 										</SwiperSlide>
-										))}
+									))}
 								</Swiper>
 								<div className="product-thumbs-wrap">
 									<Swiper
@@ -82,14 +109,14 @@ const MainContent = () => {
 										watchSlidesProgress
 									>
 										{productDetails.images.map((image, index) => (
-										<SwiperSlide key={index} className="product-thumb">
-											<img
-											src={image}
-											alt={`Thumbnail ${productDetails.name} ${index + 1}`}
-											width="100"
-											height="112"
-											/>
-										</SwiperSlide>
+											<SwiperSlide key={index} className="product-thumb">
+												<img
+													src={image}
+													alt={`Thumbnail ${productDetails.name} ${index + 1}`}
+													width="100"
+													height="112"
+												/>
+											</SwiperSlide>
 										))}
 									</Swiper>
 								</div>
@@ -149,57 +176,53 @@ const MainContent = () => {
 									</ul>
 								</div>
 
-								<hr className="product-divider" /> 
-								
-								{productDetails.variants_mapping && productDetails.variants_mapping.length > 0 ? (
-								<div>
-									{productDetails.variants_mapping.map((variant, index) => (
-									<div key={index} className={`product-form product-variation-form product-${variant.attribute.toLowerCase()}-swatch`}>
-										{/* Display attribute label */}
-										<label className="mb-1">{variant.attribute}:</label>
+								<hr className="product-divider" />
 
-										{/* Check if the attribute is "Size" */}
-										{variant.attribute === "Size" ? (
-										<div className="flex-wrap d-flex align-items-center product-variations">
-											{variant.attribute_values.map((value) => (
-											<a key={value._id} href="#" className="size">
-												{value.value}
-											</a>
-											))}
+								{productDetails.variants_mapping && productDetails.variants_mapping.length > 0 ? (
+									<div>
+										{productDetails.variants_mapping.map((variant, index) => (
+											<div key={index} className={`product-form product-variation-form product-${variant.attribute.toLowerCase()}-swatch`}>
+												{/* Display attribute label */}
+												<label className="mb-1">{variant.attribute}:</label>
+
+												{/* Check if the attribute is "Size" */}
+												{variant.attribute === "Size" ? (
+													<div className="flex-wrap d-flex align-items-center product-variations">
+														{variant.attribute_values.map((value) => (
+															<a key={value._id} href="#" className="size">
+																{value.value}
+															</a>
+														))}
+													</div>
+												) : variant.attribute === "Colour" ? (
+													// If the attribute is "Colour", render color swatches
+													<div className="d-flex align-items-center product-variations">
+														{variant.attribute_values.map((value) => (
+															<a
+																key={value._id}
+																href="#"
+																className="color"
+																style={{ backgroundColor: value.value.toLowerCase() }}
+															></a>
+														))}
+													</div>
+												) : null}
+
+												{/* Clear all option */}
+												<a href="#" className="product-variation-clean" style={{ display: 'none' }}>
+													Clean All
+												</a>
+											</div>
+										))}
+										<div className="product-variation-price">
+											<span className="rupee">₹</span>{productDetails.sale_price}
 										</div>
-										) : variant.attribute === "Colour" ? (
-										// If the attribute is "Colour", render color swatches
-										<div className="d-flex align-items-center product-variations">
-											{variant.attribute_values.map((value) => (
-											<a
-												key={value._id}
-												href="#"
-												className="color"
-												style={{ backgroundColor: value.value.toLowerCase() }}
-											></a>
-											))}
-										</div>
-										) : null}
-										
-										{/* Clear all option */}
-										<a href="#" className="product-variation-clean" style={{ display: 'none' }}>
-										Clean All
-										</a>
 									</div>
-									))}
-									<div className="product-variation-price">
-										<span className="rupee">₹</span>{productDetails.sale_price}
-									</div>
-								</div>
-								):(
+								) : (
 									<div className="product-variation-price" style={{ display: 'block' }}>
-										<span className="rupee">₹</span>{productDetails.sale_price}
+										<span className="rupee"></span>{productDetails.sale_price}
 									</div>
 								)}
-
-
-								
-
 								<div className="social-links-wrapper">
 									<div className="social-links">
 										<div className="social-icons social-no-color border-thin">
@@ -235,9 +258,18 @@ const MainContent = () => {
 										</a>
 									</div>
 									<a
-										// href="/cart"
-										onClick={()=>alert("Item Added to Cart")}
-										type="button" className="btn btn-primary">Add to Cart</a>
+										onClick={() => {
+											if (localStorage.getItem("accessToken") === "") {
+												addToCart(productDetails._id);
+											} else {
+												window.location.href = "/login";
+											}
+										}}
+										type="button"
+										className="btn btn-primary"
+									>
+										Add to Cart
+									</a>
 									<a
 										href="/cart"
 										onClick={localStorage.setItem("cart_prodId", productDetails._id)}

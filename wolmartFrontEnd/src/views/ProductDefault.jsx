@@ -106,7 +106,7 @@ function ProductDefault() {
 							{/* sidebar */}
 							<SideBar />
 						</div>
-						<RelatedProducts />
+						{/* <RelatedProducts /> */}
 					</div>
 				</div>
 			</main>
