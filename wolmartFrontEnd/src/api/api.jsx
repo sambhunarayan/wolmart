@@ -12,7 +12,8 @@ console.log("DEC KEY", decKey)
 
 const apiClient = axios.create({
   headers: {
-    Authorization: localStorage.getItem("accessToken"),
+    // Authorization: localStorage.getItem("accessToken"),
+    Authorization:"34064cb7bf66c27br0z9Kjz63w1v8pkPp0V48+h7nF96dlbnPTZ1/8iiH4rxY+b+YHALrJIpX6Rq4Lyvu2nACXkiy58y1nTQs/Tnm5RtYcV/oS2AmhU/cPanqCK1boJotfXdf3sgxArTDNp2vmzawdiPDoDg1Yfq4ZpgTdKxlQOBtLaaGWYdbgaVAR1IpiOBQl34Z/rQLaDzKfU+nR0mPTztQ7bxMBHD+yHJYZHKAy3VGr4SgoCX5MpladzaU2doabWLF9la/8McA+SWhGUPDJ5BjyKgE2EWyJKAYg==",
     "Content-Type": "application/json",
   },
 });
@@ -25,10 +26,10 @@ export const fetchData = async (requestModel) => {
   );
 
   // Print the headers before the request
-  // console.log("Authorization header:", apiClient.defaults.headers);
+  console.log("Authorization header:", apiClient.defaults.headers);
 
   // Print the encrypted request data
-  // console.log("Encrypted request data:", encryptedRequestData);
+  console.log("Encrypted request data:", requestModel);
 
   try {
     const response = await apiClient.post(apiUrl, {

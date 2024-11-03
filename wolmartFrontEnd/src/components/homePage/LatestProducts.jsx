@@ -1,5 +1,8 @@
-function LatesProducts({ latesProductsList }) {
+import { fetchData } from "../../api/api";
 
+
+
+function LatesProducts({ latesProductsList }) {
   // Initialize empty arrays to hold lists
   const list1 = [];
   const list2 = [];
@@ -22,6 +25,30 @@ function LatesProducts({ latesProductsList }) {
   console.log("List 3:", list3);
   console.log("List 4:", list4);
   console.log("List 5:", list5);
+
+  const addToCart = async (product_Id) => {
+    const requestModel = {
+      service: "cart",
+      action: "addToCart",
+      input: {
+        product_id: product_Id,
+        product_variant_id: "67208d325554671c2e066aec",
+        quantity: 1,
+      },
+    };
+
+    try {
+      const response = await fetchData(requestModel);
+      console.log("Add to cart Response:", response);
+
+      // Set product details from response
+      if (response && response.data) {
+        setProductDetails(response.data);
+      }
+    } catch (error) {
+      console.error("Error fetching ProductDetails:", error);
+    }
+  };
   return (
     <>
       <div className="container">
@@ -108,8 +135,12 @@ function LatesProducts({ latesProductsList }) {
                       key={index}
                     >
                       <figure className="product-media">
-                        <a href="/productDefault"
-                          onClick={localStorage.setItem("product_id", list1._id)}
+                        <a
+                          href="/productDefault"
+                          onClick={()=>localStorage.setItem(
+                            "product_id",
+                            list1._id
+                          )}
                         >
                           <img
                             src={list1.images[0]}
@@ -169,9 +200,7 @@ function LatesProducts({ latesProductsList }) {
                           title="Add to wishlist"
                         ></a>
                         <h4 className="product-name">
-                          <a href="product-default.html">
-                            {list1.name}
-                          </a>
+                          <a href="product-default.html">{list1.name}</a>
                         </h4>
                         <div className="ratings-container">
                           <div className="ratings-full">
@@ -190,12 +219,8 @@ function LatesProducts({ latesProductsList }) {
                         </div>
                         <div className="product-pa-wrapper">
                           <div className="product-price">
-                            <ins className="new-price">
-                              ${list1.sale_price}
-                            </ins>
-                            <del className="old-price">
-                              ${list1.base_price}
-                            </del>
+                            <ins className="new-price">${list1.sale_price}</ins>
+                            <del className="old-price">${list1.base_price}</del>
                           </div>
                           <div className="product-action">
                             <a
@@ -219,13 +244,20 @@ function LatesProducts({ latesProductsList }) {
                   style={{ width: "208px", marginRight: "20px" }}
                 >
                   {list2.map((list2, index) => (
-                    <div className="product product-image-gap product-simple"
+                    <div
+                      className="product product-image-gap product-simple"
                       key={index}
                     >
                       <figure className="product-media">
-                        <a href="/productDefault"
-                          onClick={localStorage.setItem("product_id", list2._id)}
-                        >                          <img
+                        <a
+                          href="/productDefault"
+                          onClick={()=>localStorage.setItem(
+                            "product_id",
+                            list2._id
+                          )}
+                        >
+                          {" "}
+                          <img
                             src={list2.images[0]}
                             alt="Product"
                             width="295"
@@ -279,7 +311,8 @@ function LatesProducts({ latesProductsList }) {
                           </div>
                           <div className="product-action">
                             <a
-                              href="#"
+                              // href="#"
+                              onClick={() => addToCart(list2._id)}
                               className="btn-cart btn-product btn btn-link btn-underline"
                             >
                               Add To Cart
@@ -299,13 +332,20 @@ function LatesProducts({ latesProductsList }) {
                   style={{ width: "208px", marginRight: "20px" }}
                 >
                   {list3.map((list3, index) => (
-                    <div className="product product-image-gap product-simple"
+                    <div
+                      className="product product-image-gap product-simple"
                       key={index}
                     >
                       <figure className="product-media">
-                        <a href="/productDefault"
-                          onClick={localStorage.setItem("product_id", list3._id)}
-                        >                          <img
+                        <a
+                          href="/productDefault"
+                          onClick={()=>localStorage.setItem(
+                            "product_id",
+                            list3._id
+                          )}
+                        >
+                          {" "}
+                          <img
                             src={list3.images[0]}
                             alt="Product"
                             width="295"
@@ -378,13 +418,20 @@ function LatesProducts({ latesProductsList }) {
                   style={{ width: "208px", marginRight: "20px" }}
                 >
                   {list4.map((list4, index) => (
-                    <div className="product product-image-gap product-simple"
+                    <div
+                      className="product product-image-gap product-simple"
                       key={index}
                     >
                       <figure className="product-media">
-                        <a href="/productDefault"
-                          onClick={localStorage.setItem("product_id", list4._id)}
-                        >                          <img
+                        <a
+                          href="/productDefault"
+                          onClick={()=>localStorage.setItem(
+                            "product_id",
+                            list4._id
+                          )}
+                        >
+                          {" "}
+                          <img
                             src={list4.images[0]}
                             alt="Product"
                             width="295"
@@ -448,7 +495,6 @@ function LatesProducts({ latesProductsList }) {
                       </div>
                     </div>
                   ))}
-
                 </div>
                 {/* FIFTH COLUMN */}
                 <div
@@ -458,13 +504,20 @@ function LatesProducts({ latesProductsList }) {
                   style={{ width: "208px", marginRight: "20px" }}
                 >
                   {list5.map((list5, index) => (
-                    <div className="product product-image-gap product-simple"
+                    <div
+                      className="product product-image-gap product-simple"
                       key={index}
                     >
                       <figure className="product-media">
-                        <a href="/productDefault"
-                          onClick={localStorage.setItem("product_id", list5._id)}
-                        >                          <img
+                        <a
+                          href="/productDefault"
+                          onClick={()=>localStorage.setItem(
+                            "product_id",
+                            list5._id
+                          )}
+                        >
+                          {" "}
+                          <img
                             src={list5.images[0]}
                             alt="Product"
                             width="295"
@@ -528,7 +581,6 @@ function LatesProducts({ latesProductsList }) {
                       </div>
                     </div>
                   ))}
-
                 </div>
               </div>
               <span
