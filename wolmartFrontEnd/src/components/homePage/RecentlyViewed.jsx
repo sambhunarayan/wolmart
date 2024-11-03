@@ -27,9 +27,15 @@ function RecentlyViewed({ mostPopularDeals }) {
 						{mostPopularDeals.map((recentlyViewed, index) => <div
 							className="swiper-slide product product-image-gap product-simple"
 							style={{ width: '216px', marginRight: '20px' }}
+							key={index}
 						>
 							<figure className="product-media">
-								<a href="product-default.html">
+								<a
+									href="/productDefault"
+									onClick={() => localStorage.setItem(
+										"product_id",
+										recentlyViewed._id
+									)}								>
 									<img
 										src={recentlyViewed.images[0]}
 										alt="Product"
