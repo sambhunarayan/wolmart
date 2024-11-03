@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet';
-import Header from '../components/Header';
+import InnerHeader from '../components/InnerHeader';
 import ScrollTop from '../components/ScrollTop';
 import Footer from '../components/Footer';
 function Login() {
@@ -72,7 +72,7 @@ function Login() {
 
 				<script src="/assets/js/main.min.js"></script>
 			</Helmet>
-			<Header />
+			<InnerHeader />
 			<main className="main login-page">
 				<div className="page-header">
 					<div className="container">

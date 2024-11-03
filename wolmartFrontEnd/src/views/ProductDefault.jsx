@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet';
-import Header from '../components/Header';
+import InnerHeader from '../components/Header';
 import Navigation from '../components/productDefault/Navigation';
 import MainContent from '../components/productDefault/MainContent';
 import SideBar from '../components/productDefault/SideBar';
@@ -94,7 +94,7 @@ function ProductDefault() {
 				<script src="/assets/js/photoswipe-ui-default.min.js"></script>
 				<script src="/assets/js/main.min.js"></script>
 			</Helmet>{' '}
-			<Header />
+			<InnerHeader />
 			<main className="main mb-10 pb-1">
 				{/* navbar */}
 				<Navigation />

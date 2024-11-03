@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet';
-import Header from '../components/Header';
+import InnerHeader from '../components/InnerHeader';
 import Footer from '../components/Footer';
 import ScrollTop from '../components/ScrollTop';
 function Cart() {
@@ -65,7 +65,7 @@ function Cart() {
 					href="/assets/css/style.min.css"
 				/>
 			</Helmet>
-			<Header />
+			<InnerHeader />
 			<main className="main cart">
 				<nav className="breadcrumb-nav">
 					<div className="container">

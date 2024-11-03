@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet';
-import Header from '../components/Header';
+import InnerHeader from '../components/InnerHeader';
 import ScrollTop from '../components/ScrollTop';
 import { Link } from 'react-router-dom';
 import LoginForm from '../components/checkout/LoginForm';
@@ -81,7 +81,7 @@ function Checkout({ currentStep }) {
 				<script src="/assets/js/photoswipe-ui-default.min.js"></script>
 				<script src="/assets/js/main.min.js"></script>
 			</Helmet>
-			<Header />
+			<InnerHeader />
 
 			<main className="main checkout">
 				<nav className="breadcrumb-nav">
