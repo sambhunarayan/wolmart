@@ -27,12 +27,13 @@ function LatesProducts({ latesProductsList }) {
   console.log("List 5:", list5);
 
   const addToCart = async (product_Id) => {
+    console.log("PRODUCT ID::::::::::::", product_Id);
     const requestModel = {
       service: "cart",
       action: "addToCart",
       input: {
         product_id: product_Id,
-        product_variant_id: "67208d325554671c2e066aec",
+        product_variant_id: "",
         quantity: 1,
       },
     };
@@ -43,7 +44,6 @@ function LatesProducts({ latesProductsList }) {
 
       // Set product details from response
       if (response && response.data) {
-        setProductDetails(response.data);
       }
     } catch (error) {
       console.error("Error fetching ProductDetails:", error);
@@ -137,7 +137,7 @@ function LatesProducts({ latesProductsList }) {
                       <figure className="product-media">
                         <a
                           href="/productDefault"
-                          onClick={()=>localStorage.setItem(
+                          onClick={() => localStorage.setItem(
                             "product_id",
                             list1._id
                           )}
@@ -251,7 +251,7 @@ function LatesProducts({ latesProductsList }) {
                       <figure className="product-media">
                         <a
                           href="/productDefault"
-                          onClick={()=>localStorage.setItem(
+                          onClick={() => localStorage.setItem(
                             "product_id",
                             list2._id
                           )}
@@ -339,7 +339,7 @@ function LatesProducts({ latesProductsList }) {
                       <figure className="product-media">
                         <a
                           href="/productDefault"
-                          onClick={()=>localStorage.setItem(
+                          onClick={() => localStorage.setItem(
                             "product_id",
                             list3._id
                           )}
@@ -425,7 +425,7 @@ function LatesProducts({ latesProductsList }) {
                       <figure className="product-media">
                         <a
                           href="/productDefault"
-                          onClick={()=>localStorage.setItem(
+                          onClick={() => localStorage.setItem(
                             "product_id",
                             list4._id
                           )}
@@ -511,7 +511,7 @@ function LatesProducts({ latesProductsList }) {
                       <figure className="product-media">
                         <a
                           href="/productDefault"
-                          onClick={()=>localStorage.setItem(
+                          onClick={() => localStorage.setItem(
                             "product_id",
                             list5._id
                           )}

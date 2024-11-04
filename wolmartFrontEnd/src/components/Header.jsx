@@ -11,11 +11,11 @@ function header() {
               <a href="my-account.html" className="d-lg-show">
                 My Account
               </a>
-              <a href="login.html" className="d-lg-show login sign-in">
+              <a href="/login" className="d-lg-show login sign-in">
                 <i className="w-icon-account"></i>Sign In
               </a>
               <span className="delimiter d-lg-show">/</span>
-              <a href="signup.html" className="ml-0 d-lg-show login register">
+              <a href="/login" className="ml-0 d-lg-show login register">
                 Register
               </a>
             </div>
@@ -95,7 +95,7 @@ function header() {
               </a>
               <div className="dropdown cart-dropdown cart-offcanvas mr-0 mr-lg-2">
                 <div className="cart-overlay"></div>
-                <a href="#" className="cart-toggle label-down link">
+                <a href="/cart" className="cart-toggle label-down link">
                   <i className="w-icon-cart">
                     <span className="cart-count text-white">2</span>
                   </i>

@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { fetchData } from "../../api/api";
 
+
 function Category() {
   const [categories, setCategories] = useState([]);
-
   // Fetch categories
   useEffect(() => {
     const handleFetchCategories = async () => {
@@ -26,7 +26,6 @@ function Category() {
         console.error("Error fetching categories:", error);
       }
     };
-
     handleFetchCategories();
   }, []);
   return (
@@ -36,11 +35,11 @@ function Category() {
           {categories.map((category) => (
             <div key={category.id} className="category category-ellipse">
               <figure className="category-media">
-                <a href="shop.html">
+                <a href="/shop">
                   <img
                     src={category.image_url}
                     alt="Category"
-                    style={{width:'71px',height:'71px'}}
+                    style={{ width: '71px', height: '71px' }}
                   />
                 </a>
               </figure>
