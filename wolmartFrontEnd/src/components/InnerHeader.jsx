@@ -94,7 +94,7 @@ const InnerHeader = () => {
 						</a>
 						<div className="dropdown cart-dropdown cart-offcanvas mr-0 mr-lg-2">
 							<div className="cart-overlay"></div>
-							<a href="#" className="cart-toggle label-down link">
+							<a href="/cart" className="cart-toggle label-down link">
 								<i className="w-icon-cart">
 									<span className="cart-count text-white">2</span>
 								</i>

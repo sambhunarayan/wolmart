@@ -163,67 +163,66 @@ function Cart() {
                     </tr>
                   </thead>
 
-                  {cartList.map((cartItem, index) => (
-                    <tbody>
-                      <tr key={index}>
-                        <td className="product-thumbnail">
-                          <div className="p-relative">
-                            <a
-                              href="/product-default"
-                              data-previewlistener="true"
-                            >
-                              <figure>
-                                <img
-                                  src={cartItem.image_url[0]}
-                                  alt="product"
-                                  width="300"
-                                  height="338"
-                                />
-                              </figure>
+                  {cartList.length === 0 ? (
+                    <h4>Your cart is empty</h4>
+                  ) : (
+                    cartList.map((cartItem, index) => (
+                      <tbody key={index}>
+                        <tr>
+                          <td className="product-thumbnail">
+                            <div className="p-relative">
+                              <a href="/product-default" data-previewlistener="true">
+                                <figure>
+                                  <img
+                                    src={cartItem.image_url[0]}
+                                    alt="product"
+                                    width="300"
+                                    height="338"
+                                  />
+                                </figure>
+                              </a>
+                              <button
+                                type="submit"
+                                className="btn btn-close"
+                                onClick={() => removeFromCart(cartItem._id)}
+                              >
+                                <i className="fas fa-times"></i>
+                              </button>
+                            </div>
+                          </td>
+                          <td className="product-name">
+                            <a href="/product-default" data-previewlistener="true">
+                              {cartItem.product_name}
                             </a>
-                            <button
-                              type="submit"
-                              className="btn btn-close"
-                              onClick={() => removeFromCart(cartItem._id)}
-                            >
-                              <i className="fas fa-times"></i>
-                            </button>
-                          </div>
-                        </td>
-                        <td className="product-name">
-                          <a
-                            href="/product-default"
-                            data-previewlistener="true"
-                          >
-                            {cartItem.product_name}
-                          </a>
-                        </td>
-                        <td className="product-price">
-                          <span className="amount">
-                            <span className="rupee">₹</span>
-                            {cartItem.base_price}
-                          </span>
-                        </td>
-                        <td className="product-quantity">
-                          <div className="input-group">
-                            <input
-                              className="quantity form-control"
-                              type="number"
-                              min="1"
-                              max="100000"
-                            />
-                            <button className="quantity-plus w-icon-plus"></button>
-                            <button className="quantity-minus w-icon-minus"></button>
-                          </div>
-                        </td>
-                        <td className="product-subtotal">
-                          <span className="amount">
-                            <span className="rupee">₹</span>40.00
-                          </span>
-                        </td>
-                      </tr>
-                    </tbody>
-                  ))}
+                          </td>
+                          <td className="product-price">
+                            <span className="amount">
+                              <span className="rupee">₹</span>
+                              {cartItem.base_price}
+                            </span>
+                          </td>
+                          <td className="product-quantity">
+                            <div className="input-group">
+                              <input
+                                className="quantity form-control"
+                                type="number"
+                                min="1"
+                                max="100000"
+                              />
+                              <button className="quantity-plus w-icon-plus"></button>
+                              <button className="quantity-minus w-icon-minus"></button>
+                            </div>
+                          </td>
+                          <td className="product-subtotal">
+                            <span className="amount">
+                              <span className="rupee">₹</span>40.00
+                            </span>
+                          </td>
+                        </tr>
+                      </tbody>
+                    ))
+                  )}
+
                 </table>
                 <div className="cart-action mb-6">
                   <a

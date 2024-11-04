@@ -17,6 +17,7 @@ import ScrollTop from "../components/ScrollTop";
 import { useState, useEffect } from "react";
 import { fetchData } from "../api/api";
 
+
 function homePage() {
   const [hotDeals, setHotDeals] = useState([]);
   const [dayDeals, setDayDeals] = useState([]);
@@ -62,6 +63,8 @@ function homePage() {
   useEffect(() => {
     console.log("ourBrand updated:", ourBrandList);
   }, [ourBrandList]);
+
+
   return (
     <>
       <Helmet>
